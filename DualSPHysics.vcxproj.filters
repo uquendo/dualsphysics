@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Source\Functions.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JException.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JObject.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JPartData.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JCfgRun.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JDivideCpu.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JVarsAscii.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JSpaceCtes.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JSpaceEParms.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JSph.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JSphCpu.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JSphGpu.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JLog.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JSpaceParts.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JPtxasInfo.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\JException.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Functions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JObject.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JPartData.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JVarsAscii.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JSpaceCtes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JSpaceEParms.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JSph.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JSphCpu.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JSphTimersCpu.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\TypesDef.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Types.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JCfgRun.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JDivideCpu.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CudaSphApi.h">
+      <Filter>SourceCuda</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JSphGpu.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JSphTimersGpu.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JXml.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tinyxml.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tinystr.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JSphMotion.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JFormatFiles2.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JLog.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JTimerCuda.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JSpaceParts.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JPtxasInfo.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Source\CudaSphApi.cu">
+      <Filter>SourceCuda</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\CudaSphFC.cu">
+      <Filter>SourceCuda</Filter>
+    </None>
+    <None Include="Source\CudaSphNL.cu">
+      <Filter>SourceCuda</Filter>
+    </None>
+    <None Include="Source\CudaSphSU.cu">
+      <Filter>SourceCuda</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{2dcfca84-a2b6-4e56-a8de-91307b90c721}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{9af155ff-749e-4b87-9481-7bab4497a49f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SourceCuda">
+      <UniqueIdentifier>{aa87a113-7819-4175-b6de-b9baaff63e7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{f7daf0ff-38a1-468e-acf9-63b303d59b66}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

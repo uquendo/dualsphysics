@@ -1,0 +1,47 @@
+#DualSPHysics compilation (only CPU)
+
+#Linux architecture
+#ARCH=32
+ARCH=64
+
+#To include OpenMP libraries
+#WITHOMP=0
+WITHOMP=1
+
+EXECNAME=DualSPHysicsCPU_linux$(ARCH)
+
+JLIBS=-L./ -ljxml_$(ARCH) -ljformatfiles2_$(ARCH) -ljsphmotion_$(ARCH)
+
+OBJ_CPU=main.o Functions.o JCfgRun.o JDivideCpu.o JException.o JLog.o JObject.o JPartData.o JSpaceCtes.o JSpaceEParms.o JSpaceParts.o JSph.o JSphCpu.o JVarsAscii.o 
+OBJ_CUDA=CudaSphApi.o
+OBJ_GPU=JPtxasInfo.o JSphGpu.o
+
+OBJECTS=$(OBJ_CPU)
+
+CC=g++
+CCFLAGS=-D_ONLY_CPU -c -O3
+CCLINKFLAGS=-static
+
+ifeq ($(ARCH),32)
+CCFLAGS := $(CCFLAGS) -m32 
+CCLINKFLAGS := $(CCLINKFLAGS) -m32 
+endif
+
+ifeq ($(WITHOMP),1)
+CCFLAGS := $(CCFLAGS) -fopenmp
+CCLINKFLAGS := $(CCLINKFLAGS) -fopenmp -lgomp 
+endif
+
+all:dualsphysics 
+	mv dualsphysics $(EXECNAME)
+	rm -rf *.o
+
+dualsphysics: $(OBJECTS)
+	$(CC) $(CCLINKFLAGS) $(OBJECTS) -o $@ $(JLIBS)
+
+.cpp.o: 
+	$(CC) $(CCFLAGS) $< 
+
+clean:
+	rm -rf *.o DualSPHysics*
+
