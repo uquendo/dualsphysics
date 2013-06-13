@@ -1,8 +1,8 @@
 #DualSPHysics compilation 
 
 #Linux architecture
-#ARCH=32
-ARCH=64
+ARCH=32
+#ARCH=64
 
 #To include OpenMP libraries
 #WITHOMP=0
@@ -26,10 +26,8 @@ NVCC=nvcc
 NVCCFLAGS=-c $(GENCODE) -use_fast_math -O3 -I./
 NVCCLINKFLAGS=
 
-ifeq ($(ARCH),64)
-NVCCFLAGS := $(NVCCFLAGS) -m64
-NVCCLINKFLAGS := $(NVCCLINKFLAGS) -m64
-endif
+NVCCFLAGS := $(NVCCFLAGS) -m$(ARCH)
+NVCCLINKFLAGS := $(NVCCLINKFLAGS) -m$(ARCH)
 
 ifeq ($(WITHOMP),1)
 NVCCFLAGS := $(NVCCFLAGS) -Xcompiler -fopenmp

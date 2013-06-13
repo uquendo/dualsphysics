@@ -1,0 +1,1517 @@
+ptxas /tmp/tmpxft_00007cbb_00000000-11_CudaSphApi.compute_10.ptx, line 4051; warning : Double is not supported. Demoting to float
+ptxas info    : 200 bytes gmem, 72 bytes cmem[0], 40 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel2ELj9EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_10'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 57 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 41 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 44 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel2ELj25EEvjjjPjP5uint2fP6float4Pf' for 'sm_10'
+ptxas info    : Used 16 registers, 48 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 52 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi1ELi4ELi4ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 19 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb1ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 37 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb0ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerReduMaxUILj256EEvjPjS0_' for 'sm_10'
+ptxas info    : Used 4 registers, 32 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 36 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb0ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_10'
+ptxas info    : Used 15 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb1ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel2ELj25EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_10'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb1ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_10'
+ptxas info    : Used 13 registers, 80 bytes smem, 8 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerCalcRidpjjjjPjS_' for 'sm_10'
+ptxas info    : Used 3 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 39 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi5ELi4ELi20ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 19 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 57 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb0ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z13KerPreShepardILb1EEvjjP6float3PfPjjfP6float4' for 'sm_10'
+ptxas info    : Used 7 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 58 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust13SrtsScanSpineIvEEvPiS6_i' for 'sm_10'
+ptxas info    : Used 9 registers, 832 bytes smem, 16 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel1ELj25EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_10'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb1ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb0ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z15KerMoveMatBoundILb1EEvjj9tmatrix4ffPjP6float3S3_' for 'sm_10'
+ptxas info    : Used 10 registers, 112 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 34 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi7ELi4ELi28ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 19 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 58 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb1ELb1EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_10'
+ptxas info    : Used 17 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 47 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel1ELj2EEvjjjjjPjP4int2fP6float4Pf' for 'sm_10'
+ptxas info    : Used 23 registers, 64 bytes smem, 28 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 41 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb0ELb1EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_10'
+ptxas info    : Used 17 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel1ELj9EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_10'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb1ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 51 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z12KerResetAceyjjP6float3' for 'sm_10'
+ptxas info    : Used 3 registers, 32 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 39 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi3ELi4ELi12ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 19 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 39 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 59 registers, 80 bytes smem, 12 bytes cmem[1], 4 bytes lmem
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb0ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z12KerCellBegNvILj1EEvjjiiiP5uint2P4int2' for 'sm_10'
+ptxas info    : Used 17 registers, 48 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 58 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 34 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb1ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_10'
+ptxas info    : Used 13 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 47 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel2ELj9EEvjjjPjP5uint2fP6float4Pf' for 'sm_10'
+ptxas info    : Used 16 registers, 48 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 58 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi0ELi4ELi0ENS4_20PreprocessKeyFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 18 registers, 2112 bytes smem, 20 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 45 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 49 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb0ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z13KerCalcFtDistjj6float3PS_PjS0_' for 'sm_10'
+ptxas info    : Used 5 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 53 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb0ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_10'
+ptxas info    : Used 13 registers, 80 bytes smem, 8 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 45 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 49 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 51 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerPreInteraction_Forcesjjff6float3PKS_S1_PKfPfPS_P6float4S7_' for 'sm_10'
+ptxas info    : Used 9 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 50 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi4ELi4ELi16ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 19 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 39 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 59 registers, 80 bytes smem, 12 bytes cmem[1], 4 bytes lmem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb0ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerSortDataIL6TpStep1EEvjjPjS1_P6float3S3_PfS3_S4_S3_S3_S4_S1_S3_S3_S4_S3_S4_S3_S3_S4_' for 'sm_10'
+ptxas info    : Used 8 registers, 112 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 36 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail23launch_closure_by_valueINS2_18for_each_n_closureINS_12zip_iteratorINS_5tupleINS_10device_ptrIjEENS_16reverse_iteratorIS9_EENS_9null_typeESC_SC_SC_SC_SC_SC_SC_EEEEiNS0_18swap_pair_elementsEEEEEvT_' for 'sm_10'
+ptxas info    : Used 8 registers, 32 bytes smem
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 53 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 42 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb0ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z10KerCalcFa2jP6float3Pf' for 'sm_10'
+ptxas info    : Used 5 registers, 32 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 50 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi6ELi4ELi24ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 19 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 57 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb1ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_10'
+ptxas info    : Used 15 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel1ELj1EEvjjjjjPjP4int2fP6float4Pf' for 'sm_10'
+ptxas info    : Used 23 registers, 64 bytes smem, 28 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 53 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 44 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z18KerInvertMatrixKgcILb1EEvjP11tsymatrix3f' for 'sm_10'
+ptxas info    : Used 11 registers, 32 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 42 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 57 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z18KerSortDataLaminarjjPjP11tsymatrix3fS1_' for 'sm_10'
+ptxas info    : Used 5 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 52 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi2ELi4ELi8ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 19 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 53 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 37 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb0ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z10KerRhopOutILb1EEvjjjPjPfffS0_' for 'sm_10'
+ptxas info    : Used 3 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 36 bytes cmem[1], 24 bytes lmem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 44 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerFtUpdateILb1EEvjjf6float3S0_S0_PjPS0_S2_S2_' for 'sm_10'
+ptxas info    : Used 11 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 34 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel2ELj1EEvjjjjjPjP4int2fP6float4Pf' for 'sm_10'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 36 bytes cmem[1], 24 bytes lmem
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi0ELi4ELi0ENS4_20PreprocessKeyFunctorIjEENS4_10NopFunctorIjEEEEvPbPiPT_SD_PT0_SF_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 26 registers, 6416 bytes smem, 68 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 41 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb1ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 51 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerReduMaxFILj256EEvjPfS0_' for 'sm_10'
+ptxas info    : Used 4 registers, 32 bytes smem, 16 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 49 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb0ELb0EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_10'
+ptxas info    : Used 16 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 41 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb1ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z13KerSPSCalcTaujjffPKfPK11tsymatrix3fPS1_' for 'sm_10'
+ptxas info    : Used 12 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 45 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi4ELi4ELi16ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 26 registers, 6416 bytes smem, 68 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 51 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 12 bytes cmem[1], 52 bytes lmem
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 47 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerSortDataIL6TpStep2EEvjjPjS1_P6float3S3_PfS3_S4_S3_S3_S4_S1_S3_S3_S4_S3_S4_S3_S3_S4_' for 'sm_10'
+ptxas info    : Used 8 registers, 112 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 47 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail23launch_closure_by_valueINS2_18for_each_n_closureINS_12zip_iteratorINS_5tupleINS_10device_ptrIjEENS_16reverse_iteratorIS9_EENS_9null_typeESC_SC_SC_SC_SC_SC_SC_EEEEjNS0_18swap_pair_elementsEEEEEvT_' for 'sm_10'
+ptxas info    : Used 8 registers, 32 bytes smem
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb1ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 39 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 51 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z15KerMoveLinBoundjj6float3S_PjPS_S1_' for 'sm_10'
+ptxas info    : Used 7 registers, 64 bytes smem
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 45 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi6ELi4ELi24ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 26 registers, 6416 bytes smem, 68 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 36 bytes cmem[1], 64 bytes lmem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 12 bytes cmem[1], 16 bytes lmem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 36 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel1ELj25EEvjjjPjP5uint2fP6float4Pf' for 'sm_10'
+ptxas info    : Used 16 registers, 48 bytes smem, 28 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 49 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb1ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_10'
+ptxas info    : Used 12 registers, 80 bytes smem, 8 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z18KerInvertMatrixKgcILb0EEvjP11tsymatrix3f' for 'sm_10'
+ptxas info    : Used 13 registers, 32 bytes smem, 8 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 39 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 12 bytes cmem[1], 16 bytes lmem
+ptxas info    : Compiling entry function '_Z11KerCellsBegiiP4int2Pj' for 'sm_10'
+ptxas info    : Used 5 registers, 32 bytes smem, 8 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 36 bytes cmem[1], 8 bytes lmem
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi2ELi4ELi8ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 26 registers, 6416 bytes smem, 68 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb1ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 47 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 47 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z10KerRhopOutILb0EEvjjjPjPfffS0_' for 'sm_10'
+ptxas info    : Used 3 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 47 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb0ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_10'
+ptxas info    : Used 12 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 56 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel2ELj2EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 39 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z14KerCalcFtOmegajj6float3PKS_PKjS1_fPS_S4_' for 'sm_10'
+ptxas info    : Used 16 registers, 64 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 36 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi5ELi4ELi20ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 26 registers, 6416 bytes smem, 68 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 36 bytes cmem[1], 64 bytes lmem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 12 bytes cmem[1], 16 bytes lmem
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb1ELb0EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_10'
+ptxas info    : Used 16 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel1ELj9EEvjjjPjP5uint2fP6float4Pf' for 'sm_10'
+ptxas info    : Used 16 registers, 48 bytes smem, 28 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 38 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 34 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel2ELj2EEvjjjjjPjP4int2fP6float4Pf' for 'sm_10'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel2ELj1EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 12 bytes cmem[1], 16 bytes lmem
+ptxas info    : Compiling entry function '_Z10KerPreSortjjjiif6float3S_PKS_PjS2_' for 'sm_10'
+ptxas info    : Used 8 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 36 bytes cmem[1], 8 bytes lmem
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi1ELi4ELi4ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 26 registers, 6416 bytes smem, 68 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 56 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 47 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 37 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z9KerLimitZILj256EEvjj6float3S0_PKS0_Pf' for 'sm_10'
+ptxas info    : Used 6 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 36 bytes cmem[1], 24 bytes lmem
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust11FlushKernelIvEEvv' for 'sm_10'
+ptxas info    : Used 0 registers, 16 bytes smem
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel1ELj2EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 54 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 39 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z15KerMoveMatBoundILb0EEvjj9tmatrix4ffPjP6float3S3_' for 'sm_10'
+ptxas info    : Used 10 registers, 112 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 44 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi7ELi4ELi28ENS4_10NopFunctorIjEENS4_21PostprocessKeyFunctorIjEEEEvPbPiPT_SD_PT0_SF_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 26 registers, 6416 bytes smem, 68 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 36 bytes cmem[1], 24 bytes lmem
+ptxas info    : Compiling entry function '_Z11KerFtUpdateILb0EEvjjf6float3S0_S0_PjPS0_S2_S2_' for 'sm_10'
+ptxas info    : Used 12 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 36 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z13KerPreShepardILb0EEvjjP6float3PfPjjfP6float4' for 'sm_10'
+ptxas info    : Used 6 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 38 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb0ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_10'
+ptxas info    : Used 13 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel1ELj1EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_10'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 54 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z27KerPreInteraction_MatrixKgcjPK6float3PKfP6float4' for 'sm_10'
+ptxas info    : Used 6 registers, 32 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 36 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi3ELi4ELi12ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_10'
+ptxas info    : Used 26 registers, 6416 bytes smem, 68 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 51 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_10'
+ptxas info    : Used 60 registers, 96 bytes smem, 12 bytes cmem[1], 52 bytes lmem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_10'
+ptxas info    : Used 37 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z12KerCellBegNvILj2EEvjjiiiP5uint2P4int2' for 'sm_10'
+ptxas info    : Used 17 registers, 48 bytes smem, 4 bytes cmem[1]
+ptxas /tmp/tmpxft_00007cbb_00000000-8_CudaSphApi.compute_12.ptx, line 4051; warning : Double is not supported. Demoting to float
+ptxas info    : 200 bytes gmem, 72 bytes cmem[0], 40 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel2ELj9EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_12'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 57 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 41 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 44 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel2ELj25EEvjjjPjP5uint2fP6float4Pf' for 'sm_12'
+ptxas info    : Used 16 registers, 48 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 51 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi1ELi4ELi4ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 18 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb1ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 36 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb0ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerReduMaxUILj256EEvjPjS0_' for 'sm_12'
+ptxas info    : Used 4 registers, 32 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 35 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb0ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_12'
+ptxas info    : Used 16 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb1ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel2ELj25EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_12'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb1ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_12'
+ptxas info    : Used 13 registers, 80 bytes smem, 8 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerCalcRidpjjjjPjS_' for 'sm_12'
+ptxas info    : Used 3 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 39 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi5ELi4ELi20ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 18 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 62 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 56 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb0ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z13KerPreShepardILb1EEvjjP6float3PfPjjfP6float4' for 'sm_12'
+ptxas info    : Used 7 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 58 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust13SrtsScanSpineIvEEvPiS6_i' for 'sm_12'
+ptxas info    : Used 9 registers, 832 bytes smem, 16 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel1ELj25EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_12'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb1ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb0ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z15KerMoveMatBoundILb1EEvjj9tmatrix4ffPjP6float3S3_' for 'sm_12'
+ptxas info    : Used 10 registers, 112 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 33 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi7ELi4ELi28ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 18 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 58 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb1ELb1EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_12'
+ptxas info    : Used 16 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 48 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel1ELj2EEvjjjjjPjP4int2fP6float4Pf' for 'sm_12'
+ptxas info    : Used 23 registers, 64 bytes smem, 28 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 41 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb0ELb1EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_12'
+ptxas info    : Used 16 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel1ELj9EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_12'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb1ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 50 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z12KerResetAceyjjP6float3' for 'sm_12'
+ptxas info    : Used 3 registers, 32 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 39 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi3ELi4ELi12ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 18 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 39 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 61 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb0ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z12KerCellBegNvILj1EEvjjiiiP5uint2P4int2' for 'sm_12'
+ptxas info    : Used 17 registers, 48 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 58 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 33 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb1ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_12'
+ptxas info    : Used 15 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 48 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel2ELj9EEvjjjPjP5uint2fP6float4Pf' for 'sm_12'
+ptxas info    : Used 16 registers, 48 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 58 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi0ELi4ELi0ENS4_20PreprocessKeyFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 18 registers, 2112 bytes smem, 20 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 46 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 49 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb0ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z13KerCalcFtDistjj6float3PS_PjS0_' for 'sm_12'
+ptxas info    : Used 5 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 52 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb0ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_12'
+ptxas info    : Used 13 registers, 80 bytes smem, 8 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 46 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 49 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 50 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerPreInteraction_Forcesjjff6float3PKS_S1_PKfPfPS_P6float4S7_' for 'sm_12'
+ptxas info    : Used 9 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 49 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi4ELi4ELi16ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 18 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 39 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 61 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb0ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerSortDataIL6TpStep1EEvjjPjS1_P6float3S3_PfS3_S4_S3_S3_S4_S1_S3_S3_S4_S3_S4_S3_S3_S4_' for 'sm_12'
+ptxas info    : Used 8 registers, 112 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 35 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail23launch_closure_by_valueINS2_18for_each_n_closureINS_12zip_iteratorINS_5tupleINS_10device_ptrIjEENS_16reverse_iteratorIS9_EENS_9null_typeESC_SC_SC_SC_SC_SC_SC_EEEEiNS0_18swap_pair_elementsEEEEEvT_' for 'sm_12'
+ptxas info    : Used 8 registers, 32 bytes smem
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 51 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 42 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb0ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z10KerCalcFa2jP6float3Pf' for 'sm_12'
+ptxas info    : Used 5 registers, 32 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 49 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi6ELi4ELi24ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 18 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 62 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 56 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb1ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_12'
+ptxas info    : Used 16 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel1ELj1EEvjjjjjPjP4int2fP6float4Pf' for 'sm_12'
+ptxas info    : Used 23 registers, 64 bytes smem, 28 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 52 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 44 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z18KerInvertMatrixKgcILb1EEvjP11tsymatrix3f' for 'sm_12'
+ptxas info    : Used 11 registers, 32 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 42 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 57 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z18KerSortDataLaminarjjPjP11tsymatrix3fS1_' for 'sm_12'
+ptxas info    : Used 5 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 51 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi2ELi4ELi8ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 18 registers, 2112 bytes smem, 24 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 51 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 36 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb0ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 25 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z10KerRhopOutILb1EEvjjjPjPfffS0_' for 'sm_12'
+ptxas info    : Used 3 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 68 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 44 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerFtUpdateILb1EEvjjf6float3S0_S0_PjPS0_S2_S2_' for 'sm_12'
+ptxas info    : Used 11 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 33 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel2ELj1EEvjjjjjPjP4int2fP6float4Pf' for 'sm_12'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 69 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi0ELi4ELi0ENS4_20PreprocessKeyFunctorIjEENS4_10NopFunctorIjEEEEvPbPiPT_SD_PT0_SF_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 23 registers, 2960 bytes smem, 72 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 41 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb1ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 49 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerReduMaxFILj256EEvjPfS0_' for 'sm_12'
+ptxas info    : Used 4 registers, 32 bytes smem, 16 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 49 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb0ELb0EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_12'
+ptxas info    : Used 14 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 41 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb1ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 61 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z13KerSPSCalcTaujjffPKfPK11tsymatrix3fPS1_' for 'sm_12'
+ptxas info    : Used 12 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 45 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi4ELi4ELi16ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 23 registers, 2960 bytes smem, 72 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 49 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 72 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 47 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerSortDataIL6TpStep2EEvjjPjS1_P6float3S3_PfS3_S4_S3_S3_S4_S1_S3_S3_S4_S3_S4_S3_S3_S4_' for 'sm_12'
+ptxas info    : Used 8 registers, 112 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 48 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail23launch_closure_by_valueINS2_18for_each_n_closureINS_12zip_iteratorINS_5tupleINS_10device_ptrIjEENS_16reverse_iteratorIS9_EENS_9null_typeESC_SC_SC_SC_SC_SC_SC_EEEEjNS0_18swap_pair_elementsEEEEEvT_' for 'sm_12'
+ptxas info    : Used 8 registers, 32 bytes smem
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb1ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 39 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 49 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z15KerMoveLinBoundjj6float3S_PjPS_S1_' for 'sm_12'
+ptxas info    : Used 7 registers, 64 bytes smem
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 45 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi6ELi4ELi24ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 23 registers, 2960 bytes smem, 72 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 75 registers, 96 bytes smem, 40 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 64 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 35 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel1ELj25EEvjjjPjP5uint2fP6float4Pf' for 'sm_12'
+ptxas info    : Used 16 registers, 48 bytes smem, 28 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 49 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb1ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_12'
+ptxas info    : Used 14 registers, 80 bytes smem, 8 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z18KerInvertMatrixKgcILb0EEvjP11tsymatrix3f' for 'sm_12'
+ptxas info    : Used 13 registers, 32 bytes smem, 8 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 39 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 67 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerCellsBegiiP4int2Pj' for 'sm_12'
+ptxas info    : Used 5 registers, 32 bytes smem, 8 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 62 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi2ELi4ELi8ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 23 registers, 2960 bytes smem, 72 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb1ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 47 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 47 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z10KerRhopOutILb0EEvjjjPjPfffS0_' for 'sm_12'
+ptxas info    : Used 3 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 48 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb0ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_12'
+ptxas info    : Used 14 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 56 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel2ELj2EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 39 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z14KerCalcFtOmegajj6float3PKS_PKjS1_fPS_S4_' for 'sm_12'
+ptxas info    : Used 16 registers, 64 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 35 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi5ELi4ELi20ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 23 registers, 2960 bytes smem, 72 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 75 registers, 96 bytes smem, 40 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 64 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb1ELb0EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_12'
+ptxas info    : Used 14 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel1ELj9EEvjjjPjP5uint2fP6float4Pf' for 'sm_12'
+ptxas info    : Used 16 registers, 48 bytes smem, 28 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 38 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 33 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel2ELj2EEvjjjjjPjP4int2fP6float4Pf' for 'sm_12'
+ptxas info    : Used 23 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel2ELj1EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 67 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z10KerPreSortjjjiif6float3S_PKS_PjS2_' for 'sm_12'
+ptxas info    : Used 8 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 62 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi1ELi4ELi4ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 23 registers, 2960 bytes smem, 72 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 56 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 47 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 36 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z9KerLimitZILj256EEvjj6float3S0_PKS0_Pf' for 'sm_12'
+ptxas info    : Used 6 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 69 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust11FlushKernelIvEEvv' for 'sm_12'
+ptxas info    : Used 0 registers, 16 bytes smem
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel1ELj2EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 54 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 39 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z15KerMoveMatBoundILb0EEvjj9tmatrix4ffPjP6float3S3_' for 'sm_12'
+ptxas info    : Used 10 registers, 112 bytes smem
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 44 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi7ELi4ELi28ENS4_10NopFunctorIjEENS4_21PostprocessKeyFunctorIjEEEEvPbPiPT_SD_PT0_SF_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 23 registers, 2960 bytes smem, 72 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 68 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z11KerFtUpdateILb0EEvjjf6float3S0_S0_PjPS0_S2_S2_' for 'sm_12'
+ptxas info    : Used 12 registers, 80 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 35 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z13KerPreShepardILb0EEvjjP6float3PfPjjfP6float4' for 'sm_12'
+ptxas info    : Used 6 registers, 48 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 38 registers, 80 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb0ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_12'
+ptxas info    : Used 15 registers, 80 bytes smem, 4 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel1ELj1EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_12'
+ptxas info    : Used 32 registers, 64 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 54 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 61 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z27KerPreInteraction_MatrixKgcjPK6float3PKfP6float4' for 'sm_12'
+ptxas info    : Used 6 registers, 32 bytes smem
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 35 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi3ELi4ELi12ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_12'
+ptxas info    : Used 23 registers, 2960 bytes smem, 72 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 49 registers, 96 bytes smem, 36 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_12'
+ptxas info    : Used 72 registers, 96 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_12'
+ptxas info    : Used 36 registers, 80 bytes smem, 12 bytes cmem[1]
+ptxas info    : Compiling entry function '_Z12KerCellBegNvILj2EEvjjiiiP5uint2P4int2' for 'sm_12'
+ptxas info    : Used 17 registers, 48 bytes smem, 4 bytes cmem[1]
+ptxas info    : 200 bytes gmem, 72 bytes cmem[2], 40 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel2ELj9EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_20'
+ptxas info    : Function properties for _Z24KerComputeMatrixKgcNeigsIL8TpKernel2ELj9EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 72 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 59 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 50 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 54 registers, 92 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel2ELj25EEvjjjPjP5uint2fP6float4Pf' for 'sm_20'
+ptxas info    : Function properties for _Z28KerComputeForcesShepardNeigsIL8TpKernel2ELj25EEvjjjPjP5uint2fP6float4Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, 64 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 54 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi1ELi4ELi4ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi1ELi4ELi4ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 2048 bytes smem, 68 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb1ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb1ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, 68 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb0ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesBoundIL8TpKernel1ELb0ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, 76 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z11KerReduMaxUILj256EEvjPjS0_' for 'sm_20'
+ptxas info    : Function properties for _Z11KerReduMaxUILj256EEvjPjS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 7 registers, 44 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 43 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb0ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_20'
+ptxas info    : Function properties for _Z24KerComputeStepSymplecticILb0ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, 84 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb1ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb1ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, 68 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel2ELj25EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_20'
+ptxas info    : Function properties for _Z24KerComputeMatrixKgcNeigsIL8TpKernel2ELj25EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 72 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb1ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeStepSymplectic2ILb1ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z11KerCalcRidpjjjjPjS_' for 'sm_20'
+ptxas info    : Function properties for _Z11KerCalcRidpjjjjPjS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 4 registers, 56 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi5ELi4ELi20ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi5ELi4ELi20ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 2048 bytes smem, 68 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 58 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb0ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesBoundIL8TpKernel2ELb0ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 41 registers, 76 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13KerPreShepardILb1EEvjjP6float3PfPjjfP6float4' for 'sm_20'
+ptxas info    : Function properties for _Z13KerPreShepardILb1EEvjjP6float3PfPjjfP6float4
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 64 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 61 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust13SrtsScanSpineIvEEvPiS6_i' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust13SrtsScanSpineIvEEvPiS6_i
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, 784 bytes smem, 44 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel1ELj25EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_20'
+ptxas info    : Function properties for _Z24KerComputeMatrixKgcNeigsIL8TpKernel1ELj25EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, 72 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb1ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb1ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, 68 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb0ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesBoundIL8TpKernel1ELb0ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, 76 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z15KerMoveMatBoundILb1EEvjj9tmatrix4ffPjP6float3S3_' for 'sm_20'
+ptxas info    : Function properties for _Z15KerMoveMatBoundILb1EEvjj9tmatrix4ffPjP6float3S3_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 11 registers, 120 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi7ELi4ELi28ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi7ELi4ELi28ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 2048 bytes smem, 68 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 59 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb1ELb1EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_20'
+ptxas info    : Function properties for _Z20KerComputeStepVerletILb1ELb1EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, 92 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, 92 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel1ELj2EEvjjjjjPjP4int2fP6float4Pf' for 'sm_20'
+ptxas info    : Function properties for _Z23KerComputeForcesShepardIL8TpKernel1ELj2EEvjjjjjPjP4int2fP6float4Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 33 registers, 72 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 50 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb0ELb1EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_20'
+ptxas info    : Function properties for _Z20KerComputeStepVerletILb0ELb1EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, 92 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z24KerComputeMatrixKgcNeigsIL8TpKernel1ELj9EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f' for 'sm_20'
+ptxas info    : Function properties for _Z24KerComputeMatrixKgcNeigsIL8TpKernel1ELj9EEvjjjPKjPK5uint2S5_PK6float4ffP11tsymatrix3f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, 72 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb1ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb1ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, 68 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 53 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z12KerResetAceyjjP6float3' for 'sm_20'
+ptxas info    : Function properties for _Z12KerResetAceyjjP6float3
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 4 registers, 44 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb0ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi3ELi4ELi12ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi3ELi4ELi12ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 2048 bytes smem, 68 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 46 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb0ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesBoundIL8TpKernel2ELb0ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 41 registers, 76 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z12KerCellBegNvILj1EEvjjiiiP5uint2P4int2' for 'sm_20'
+ptxas info    : Function properties for _Z12KerCellBegNvILj1EEvjjiiiP5uint2P4int2
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, 60 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 59 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb1ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_20'
+ptxas info    : Function properties for _Z24KerComputeStepSymplecticILb1ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 17 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, 92 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel2ELj9EEvjjjPjP5uint2fP6float4Pf' for 'sm_20'
+ptxas info    : Function properties for _Z28KerComputeForcesShepardNeigsIL8TpKernel2ELj9EEvjjjPjP5uint2fP6float4Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, 64 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 61 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi0ELi4ELi0ENS4_20PreprocessKeyFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi0ELi4ELi0ENS4_20PreprocessKeyFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 2048 bytes smem, 68 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 53 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 60 registers, 92 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb0ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb0ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 68 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13KerCalcFtDistjj6float3PS_PjS0_' for 'sm_20'
+ptxas info    : Function properties for _Z13KerCalcFtDistjj6float3PS_PjS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 6 registers, 64 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb0ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeStepSymplectic2ILb0ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 15 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 53 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 60 registers, 92 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 53 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z24KerPreInteraction_Forcesjjff6float3PKS_S1_PKfPfPS_P6float4S7_' for 'sm_20'
+ptxas info    : Function properties for _Z24KerPreInteraction_Forcesjjff6float3PKS_S1_PKfPfPS_P6float4S7_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 15 registers, 88 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 61 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi4ELi4ELi16ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi4ELi4ELi16ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 2048 bytes smem, 68 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 46 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb0ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb0ELj25EEvjjPjP5uint2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 68 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z11KerSortDataIL6TpStep1EEvjjPjS1_P6float3S3_PfS3_S4_S3_S3_S4_S1_S3_S3_S4_S3_S4_S3_S3_S4_' for 'sm_20'
+ptxas info    : Function properties for _Z11KerSortDataIL6TpStep1EEvjjPjS1_P6float3S3_PfS3_S4_S3_S3_S4_S1_S3_S3_S4_S3_S4_S3_S3_S4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 116 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco1ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 43 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail23launch_closure_by_valueINS2_18for_each_n_closureINS_12zip_iteratorINS_5tupleINS_10device_ptrIjEENS_16reverse_iteratorIS9_EENS_9null_typeESC_SC_SC_SC_SC_SC_SC_EEEEiNS0_18swap_pair_elementsEEEEEvT_' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail23launch_closure_by_valueINS2_18for_each_n_closureINS_12zip_iteratorINS_5tupleINS_10device_ptrIjEENS_16reverse_iteratorIS9_EENS_9null_typeESC_SC_SC_SC_SC_SC_SC_EEEEiNS0_18swap_pair_elementsEEEEEvT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 48 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 60 registers, 92 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 52 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb0ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesBoundNeigsIL8TpKernel1ELb0ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, 68 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z10KerCalcFa2jP6float3Pf' for 'sm_20'
+ptxas info    : Function properties for _Z10KerCalcFa2jP6float3Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 5 registers, 44 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 61 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi6ELi4ELi24ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi6ELi4ELi24ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 2048 bytes smem, 68 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb1ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 58 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb1ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_20'
+ptxas info    : Function properties for _Z24KerComputeStepSymplecticILb1ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel1ELj1EEvjjjjjPjP4int2fP6float4Pf' for 'sm_20'
+ptxas info    : Function properties for _Z23KerComputeForcesShepardIL8TpKernel1ELj1EEvjjjjjPjP4int2fP6float4Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 33 registers, 72 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 54 registers, 92 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z18KerInvertMatrixKgcILb1EEvjP11tsymatrix3f' for 'sm_20'
+ptxas info    : Function properties for _Z18KerInvertMatrixKgcILb1EEvjP11tsymatrix3f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, 40 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb1ELb1ELj9EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 52 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco2ELb1ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 59 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z18KerSortDataLaminarjjPjP11tsymatrix3fS1_' for 'sm_20'
+ptxas info    : Function properties for _Z18KerSortDataLaminarjjPjP11tsymatrix3fS1_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 9 registers, 52 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel1EL7TpVisco2ELb0ELb0ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 54 registers, 96 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi2ELi4ELi8ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust15RakingReductionIjjLi2ELi4ELi8ENS4_10NopFunctorIjEEEEvPbPiPT_SB_NS4_16CtaDecompositionE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 2048 bytes smem, 68 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 60 registers, 92 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z30KerComputeForcesFullFluidNeigsIL8TpKernel2EL7TpVisco1ELb0ELb1ELj25EEvjjjPjP5uint2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, 96 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb0ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesBoundNeigsIL8TpKernel2ELb0ELj9EEvjjPjP5uint2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 68 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z10KerRhopOutILb1EEvjjjPjPfffS0_' for 'sm_20'
+ptxas info    : Function properties for _Z10KerRhopOutILb1EEvjjjPjPfffS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 4 registers, 64 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    16 bytes stack frame, 12 bytes spill stores, 12 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 54 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z11KerFtUpdateILb1EEvjjf6float3S0_S0_PjPS0_S2_S2_' for 'sm_20'
+ptxas info    : Function properties for _Z11KerFtUpdateILb1EEvjjf6float3S0_S0_PjPS0_S2_S2_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, 96 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel2ELj1EEvjjjjjPjP4int2fP6float4Pf' for 'sm_20'
+ptxas info    : Function properties for _Z23KerComputeForcesShepardIL8TpKernel2ELj1EEvjjjjjPjP4int2fP6float4Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 33 registers, 72 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    16 bytes stack frame, 16 bytes spill stores, 16 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi0ELi4ELi0ENS4_20PreprocessKeyFunctorIjEENS4_10NopFunctorIjEEEEvPbPiPT_SD_PT0_SF_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi0ELi4ELi0ENS4_20PreprocessKeyFunctorIjEENS4_10NopFunctorIjEEEEvPbPiPT_SD_PT0_SF_NS4_16CtaDecompositionE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 36 registers, 5456 bytes smem, 76 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 46 registers, 84 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb1ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesBoundIL8TpKernel2ELb1ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, 76 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 60 registers, 92 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z11KerReduMaxFILj256EEvjPfS0_' for 'sm_20'
+ptxas info    : Function properties for _Z11KerReduMaxFILj256EEvjPfS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 7 registers, 44 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, 92 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb0ELb0EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_20'
+ptxas info    : Function properties for _Z20KerComputeStepVerletILb0ELb0EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, 92 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 46 registers, 84 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel2ELb1ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesBoundIL8TpKernel2ELb1ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, 76 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13KerSPSCalcTaujjffPKfPK11tsymatrix3fPS1_' for 'sm_20'
+ptxas info    : Function properties for _Z13KerSPSCalcTaujjffPKfPK11tsymatrix3fPS1_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 15 registers, 60 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 54 registers, 92 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi4ELi4ELi16ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi4ELi4ELi16ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE
+    8 bytes stack frame, 8 bytes spill stores, 8 bytes spill loads
+ptxas info    : Used 36 registers, 5456 bytes smem, 76 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 60 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    32 bytes stack frame, 52 bytes spill stores, 44 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb1ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 57 registers, 92 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z11KerSortDataIL6TpStep2EEvjjPjS1_P6float3S3_PfS3_S4_S3_S3_S4_S1_S3_S3_S4_S3_S4_S3_S3_S4_' for 'sm_20'
+ptxas info    : Function properties for _Z11KerSortDataIL6TpStep2EEvjjPjS1_P6float3S3_PfS3_S4_S3_S3_S4_S1_S3_S3_S4_S3_S4_S3_S3_S4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 116 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail23launch_closure_by_valueINS2_18for_each_n_closureINS_12zip_iteratorINS_5tupleINS_10device_ptrIjEENS_16reverse_iteratorIS9_EENS_9null_typeESC_SC_SC_SC_SC_SC_SC_EEEEjNS0_18swap_pair_elementsEEEEEvT_' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail23launch_closure_by_valueINS2_18for_each_n_closureINS_12zip_iteratorINS_5tupleINS_10device_ptrIjEENS_16reverse_iteratorIS9_EENS_9null_typeESC_SC_SC_SC_SC_SC_SC_EEEEjNS0_18swap_pair_elementsEEEEEvT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 48 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb1ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesBoundIL8TpKernel1ELb1ELj1EEvjjjjPjP4int2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, 76 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 45 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel1ELb0ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 60 registers, 92 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z15KerMoveLinBoundjj6float3S_PjPS_S1_' for 'sm_20'
+ptxas info    : Function properties for _Z15KerMoveLinBoundjj6float3S_PjPS_S1_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, 76 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel2ELb1ELb0ELj2EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 54 registers, 92 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi6ELi4ELi24ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi6ELi4ELi24ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE
+    8 bytes stack frame, 8 bytes spill stores, 8 bytes spill loads
+ptxas info    : Used 36 registers, 5456 bytes smem, 76 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    32 bytes stack frame, 56 bytes spill stores, 52 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    8 bytes stack frame, 8 bytes spill stores, 8 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 43 registers, 84 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel1ELj25EEvjjjPjP5uint2fP6float4Pf' for 'sm_20'
+ptxas info    : Function properties for _Z28KerComputeForcesShepardNeigsIL8TpKernel1ELj25EEvjjjPjP5uint2fP6float4Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, 64 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel1ELb1ELb0ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, 92 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb1ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeStepSymplectic2ILb1ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 17 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z18KerInvertMatrixKgcILb0EEvjP11tsymatrix3f' for 'sm_20'
+ptxas info    : Function properties for _Z18KerInvertMatrixKgcILb0EEvjP11tsymatrix3f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, 40 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 45 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    16 bytes stack frame, 12 bytes spill stores, 12 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z11KerCellsBegiiP4int2Pj' for 'sm_20'
+ptxas info    : Function properties for _Z11KerCellsBegiiP4int2Pj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 7 registers, 48 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb0ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi2ELi4ELi8ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi2ELi4ELi8ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE
+    8 bytes stack frame, 8 bytes spill stores, 8 bytes spill loads
+ptxas info    : Used 36 registers, 5456 bytes smem, 76 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesBoundIL8TpKernel1ELb1ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesBoundIL8TpKernel1ELb1ELj2EEvjjjjPjP4int2P6float4S5_S1_PfS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, 76 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 57 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z21KerComputeForcesFluidIL8TpKernel2ELb0ELb1ELj1EEvjjjjjPjP4int2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 57 registers, 92 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z10KerRhopOutILb0EEvjjjPjPfffS0_' for 'sm_20'
+ptxas info    : Function properties for _Z10KerRhopOutILb0EEvjjjPjPfffS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 4 registers, 64 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeStepSymplectic2ILb0ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeStepSymplectic2ILb0ELb0EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_ff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 19 registers, 84 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel2ELj2EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_20'
+ptxas info    : Function properties for _Z19KerComputeMatrixKgcIL8TpKernel2ELj2EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 41 registers, 80 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 46 registers, 84 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z14KerCalcFtOmegajj6float3PKS_PKjS1_fPS_S4_' for 'sm_20'
+ptxas info    : Function properties for _Z14KerCalcFtOmegajj6float3PKS_PKjS1_fPS_S4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, 76 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 41 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi5ELi4ELi20ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi5ELi4ELi20ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE
+    8 bytes stack frame, 8 bytes spill stores, 8 bytes spill loads
+ptxas info    : Used 36 registers, 5456 bytes smem, 76 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    32 bytes stack frame, 56 bytes spill stores, 52 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    8 bytes stack frame, 8 bytes spill stores, 8 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z20KerComputeStepVerletILb1ELb0EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff' for 'sm_20'
+ptxas info    : Function properties for _Z20KerComputeStepVerletILb1ELb0EEvjjPfS0_S0_PjP6float3S3_S3_S3_S3_S3_fff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, 92 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z28KerComputeForcesShepardNeigsIL8TpKernel1ELj9EEvjjjPjP5uint2fP6float4Pf' for 'sm_20'
+ptxas info    : Function properties for _Z28KerComputeForcesShepardNeigsIL8TpKernel1ELj9EEvjjjPjP5uint2fP6float4Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, 64 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 43 registers, 84 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z23KerComputeForcesShepardIL8TpKernel2ELj2EEvjjjjjPjP4int2fP6float4Pf' for 'sm_20'
+ptxas info    : Function properties for _Z23KerComputeForcesShepardIL8TpKernel2ELj2EEvjjjjjPjP4int2fP6float4Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 33 registers, 72 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel2ELj1EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_20'
+ptxas info    : Function properties for _Z19KerComputeMatrixKgcIL8TpKernel2ELj1EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 41 registers, 80 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    16 bytes stack frame, 12 bytes spill stores, 12 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z10KerPreSortjjjiif6float3S_PKS_PjS2_' for 'sm_20'
+ptxas info    : Function properties for _Z10KerPreSortjjjiif6float3S_PKS_PjS2_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 9 registers, 92 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi1ELi4ELi4ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi1ELi4ELi4ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE
+    8 bytes stack frame, 8 bytes spill stores, 8 bytes spill loads
+ptxas info    : Used 36 registers, 5456 bytes smem, 76 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 57 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb1ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z9KerLimitZILj256EEvjj6float3S0_PKS0_Pf' for 'sm_20'
+ptxas info    : Function properties for _Z9KerLimitZILj256EEvjj6float3S0_PKS0_Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 9 registers, 72 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb1ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    16 bytes stack frame, 16 bytes spill stores, 16 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust11FlushKernelIvEEvv' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust11FlushKernelIvEEvv
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 2 registers, 32 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel1ELj2EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_20'
+ptxas info    : Function properties for _Z19KerComputeMatrixKgcIL8TpKernel1ELj2EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, 80 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb1ELj2EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 46 registers, 84 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z15KerMoveMatBoundILb0EEvjj9tmatrix4ffPjP6float3S3_' for 'sm_20'
+ptxas info    : Function properties for _Z15KerMoveMatBoundILb0EEvjj9tmatrix4ffPjP6float3S3_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 11 registers, 120 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 54 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi7ELi4ELi28ENS4_10NopFunctorIjEENS4_21PostprocessKeyFunctorIjEEEEvPbPiPT_SD_PT0_SF_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi7ELi4ELi28ENS4_10NopFunctorIjEENS4_21PostprocessKeyFunctorIjEEEEvPbPiPT_SD_PT0_SF_NS4_16CtaDecompositionE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 36 registers, 5456 bytes smem, 76 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco2ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    16 bytes stack frame, 12 bytes spill stores, 12 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z11KerFtUpdateILb0EEvjjf6float3S0_S0_PjPS0_S2_S2_' for 'sm_20'
+ptxas info    : Function properties for _Z11KerFtUpdateILb0EEvjjf6float3S0_S0_PjPS0_S2_S2_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 11 registers, 96 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb0ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 43 registers, 84 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z13KerPreShepardILb0EEvjjP6float3PfPjjfP6float4' for 'sm_20'
+ptxas info    : Function properties for _Z13KerPreShepardILb0EEvjjP6float3PfPjjfP6float4
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 64 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel1ELb1ELb0ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 43 registers, 84 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z24KerComputeStepSymplecticILb0ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f' for 'sm_20'
+ptxas info    : Function properties for _Z24KerComputeStepSymplecticILb0ELb1EEvjjPjP6float3S2_PfS2_S2_S3_S3_S2_S2_f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 17 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z19KerComputeMatrixKgcIL8TpKernel1ELj1EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f' for 'sm_20'
+ptxas info    : Function properties for _Z19KerComputeMatrixKgcIL8TpKernel1ELj1EEvjjjjjPKjPK4int2S5_PK6float4ffP11tsymatrix3f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, 80 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco1ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb0ELb0ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z27KerPreInteraction_MatrixKgcjPK6float3PKfP6float4' for 'sm_20'
+ptxas info    : Function properties for _Z27KerPreInteraction_MatrixKgcjPK6float3PKfP6float4
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 48 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb1ELb0ELj9EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 41 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi3ELi4ELi12ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE' for 'sm_20'
+ptxas info    : Function properties for _ZN6thrust6detail7backend4cuda6detail11b40c_thrust17ScanScatterDigitsIjjLi3ELi4ELi12ENS4_10NopFunctorIjEES7_EEvPbPiPT_SB_PT0_SD_NS4_16CtaDecompositionE
+    8 bytes stack frame, 8 bytes spill stores, 8 bytes spill loads
+ptxas info    : Used 36 registers, 5456 bytes smem, 76 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel1EL7TpVisco1ELb0ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 60 registers, 104 bytes cmem[0], 8 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_' for 'sm_20'
+ptxas info    : Function properties for _Z25KerComputeForcesFullFluidIL8TpKernel2EL7TpVisco2ELb1ELb1ELj1EEvjjjjjPjP4int2S4_P6float4S6_S2_P6float3PfS8_S9_PK11tsymatrix3fSC_PSA_
+    32 bytes stack frame, 52 bytes spill stores, 44 bytes spill loads
+ptxas info    : Used 63 registers, 104 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_' for 'sm_20'
+ptxas info    : Function properties for _Z26KerComputeForcesFluidNeigsIL8TpKernel2ELb0ELb1ELj25EEvjjjPjP5uint2S3_P6float4S5_S1_P6float3PfS7_S8_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, 84 bytes cmem[0], 4 bytes cmem[16]
+ptxas info    : Compiling entry function '_Z12KerCellBegNvILj2EEvjjiiiP5uint2P4int2' for 'sm_20'
+ptxas info    : Function properties for _Z12KerCellBegNvILj2EEvjjiiiP5uint2P4int2
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, 60 bytes cmem[0]
