@@ -35,7 +35,7 @@ class JPartData : protected JObject
 {
 public:
   ///Type of format files.
-  typedef enum{ FmtNull=0,FmtBin=1,FmtBi2=2,FmtBi2Out=3,FmtAscii=4 }TpFmtFile; 
+  typedef enum{ FmtNull=0,FmtBin=1,FmtBi2=2,FmtBi2Out=3,FmtAscii=4,FmtFlw=5 }TpFmtFile; 
   typedef struct{  
     float dp,h,b,rhop0,gamma;
     float massbound,massfluid;
@@ -198,6 +198,8 @@ public:
   void LoadFileInfo(TpFmtFile fmt,const std::string &file);
   void SaveFileInfo(const std::string &file)const;
   void SaveFileInfoDat(const std::string &file)const;
+
+  void SaveFileFlw(std::string file="")const;
 
   void SetMaskFileName(TpFmtFile fmt,const std::string &mask){ if(1<=int(fmt)&&int(fmt)<=4)MaskFileName[int(fmt)-1]=mask; }
   std::string GetMaskFileName(TpFmtFile fmt)const{ return(1<=int(fmt)&&int(fmt)<=4? MaskFileName[int(fmt)-1]: std::string("")); }

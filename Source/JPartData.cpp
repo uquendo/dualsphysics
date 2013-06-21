@@ -257,7 +257,30 @@ void JPartData::SaveFile(TpFmtFile fmt,const std::string &dir,bool updatebi2out)
     case FmtBi2:    SaveFileBi2(false,GetFileName(fmt,GetPartNumber(),dir));            break;
     case FmtBi2Out: SaveFileBi2Out(GetFileName(fmt,GetPartNumber(),dir),updatebi2out);  break;
     case FmtAscii:  SaveFileAscii(GetFileName(fmt,GetPartNumber(),dir));                break;
+    case FmtFlw:    SaveFileFlw(GetFileName(fmt,GetPartNumber(),dir));                  break;
   }
+}
+
+//==============================================================================
+// Stores data in a file with flw format.
+//==============================================================================
+void JPartData::SaveFileFlw(std::string file) const{
+  const char met[]="SaveFileFlw";
+  if(!DataConfigOk())RunException(met,"Initial configuration missing.");
+  if(!DataBoundOk())RunException(met,"Boundary particles data missing.");
+  if(NfluidOut>OutCount)RunException(met,"Excluded particles data missing.");
+  if(file.empty())file=GetFileName(FmtFlw,GetPartNumber(),"");
+  ifstream pf;
+  pf.open(file.c_str());
+  if(pf){
+    //TODO: write all the stuff
+    char buf[4096];
+    
+
+    if(pf.fail())RunException(met,"File writing failure.",file);
+    pf.close();
+  } else RunException(met,"Cannot open the file.",file);
+
 }
 
 //==============================================================================
@@ -577,7 +600,7 @@ JPartData::StInfoFileBi2 JPartData::GetInfoFileBi2(ifstream &pf,bool fileout)con
     if(hfmt.full){
       StHeadDatFullBi2 hdat;
       pf.read((char*)&hdat,sizeof(StHeadDatFullBi2));
-      if(rendi)fun::ReverseByteOrder((int*)&hdat,sizeof(StHeadDatFullBi2)/4);//-Conversion Big/LittleEndian
+      if(rendi)fun::ReverseByteOrder((int*)&hdat,sizeof(StHeadDatFullBi2)/4);//-Conversion Big/
       ret.dp=hdat.dp;
       ret.h=hdat.h;
       ret.b=hdat.b;

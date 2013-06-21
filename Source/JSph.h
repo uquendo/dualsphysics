@@ -28,6 +28,7 @@
 #include "JLog.h"
 #include "JPartData.h"
 #include "JTimer.h"
+
 #include <float.h>
 #include <string>
 #include <cmath>
@@ -108,6 +109,7 @@ protected:
   unsigned Npb;              ///<Number of particles of the boundary block ( \ref Nbound - \ref Nfloat ) or ( \ref Nfixed + \ref Nmoving).
   unsigned Nfluid;           ///<Number of fluid particles (including the excluded ones). 
   unsigned NpOk;             ///<Number of total particles activated at each time step (\ref Np - excluded particles). 
+  unsigned long Nprobe;      ///<Number of probe particles.
  
   float H;                   ///<Smoothing length (=coef*sqrt(dx*dx+dy*dy+dz*dz))
   float CteB;                ///<Constant that sets a limit for the maximum change in density.
@@ -138,7 +140,7 @@ protected:
   StInfoDt InfoDt;           ///<Structure to monitor the used dt values.
   int DtModif;               ///<Number of modifications performed when the new value of dt is too low.
 
-  byte SvData;               ///<Indicates the format of the output files.               
+  int SvData;               ///<Indicates the format of the output files.               
 
   ofstream *DtPf;            ///<Pointer for the file with info of DT.
   bool SvDt;                 ///<Stores a file with info of DT.
@@ -153,6 +155,10 @@ protected:
   tfloat3 *Pos;              ///<Position of the particles (X,Y,Z).
   tfloat3 *Vel;              ///<Velocity of the particles (X,Y,Z).
   float *Rhop;               ///<Density of the particles.
+
+  tfloat3 *ProbePos;         ///<Position of the probe particles (X,Y,Z).
+  tfloat3 *ProbeVel;         ///<Velocity of the probe particles (X,Y,Z).
+  float *ProbeRhop;          ///<Density of the probe particles.
 
   tint3 Ncells;              ///<Number of cells for each direction.
   int Nct;                   ///<Number of total cells.
@@ -189,6 +195,7 @@ protected:
   void Reset();
   void AllocMemory(int np);
   void AllocMemoryFloating(unsigned ftcount);
+  void AllocMemoryProbes(unsigned long np);
   void LoadCase();
   void LoadPartBegin();
 

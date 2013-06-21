@@ -51,7 +51,7 @@ void JCfgRun::Reset(){
   DBCSteps=-1;
   SvDt=false; SvRes=true; SvTimers=true;
   Sv_Binx2=false; Sv_Csv=false; Sv_Ascii=false;
-  Sv_Vtk=false;
+  Sv_Vtk=false; Sv_Flw=false;
   CaseName=""; DirOut=""; RunName=""; 
   PartBegin=0; PartBeginFirst=0; PartBeginDir="";
   Incz=-1;
@@ -99,6 +99,7 @@ void JCfgRun::VisuInfo()const{
   printf("        ascii   ASCII files (PART_xxxx of SPHysics)\n");
   printf("        vtk     VTK files\n");
   printf("        csv     CSV files\n");
+  printf("        flw     FLW files\n");
   printf("    -svdt:<0/1>      Generate file with information about the time step dt\n");
   printf("    -svres:<0/1>     Generate file that summarizes the execution process\n");
   printf("    -svtimers:<0/1>  Obtain timing for each individual process\n");
@@ -157,6 +158,7 @@ void JCfgRun::VisuConfig()const{
   PrintVar("  Sv_Csv",Sv_Csv,ln);
   PrintVar("  Sv_Ascii",Sv_Ascii,ln);
   PrintVar("  Sv_Vtk",Sv_Vtk,ln);
+  PrintVar("  Sv_Flw",Sv_Flw,ln);
   PrintVar("  Incz",Incz,ln);
   PrintVar("  RhopOut",RhopOut,ln);
   PrintVar("  RhopOutMin",RhopOutMin,ln);
@@ -325,12 +327,13 @@ void JCfgRun::LoadOpts(string *optlis,int optn,int lv,string file){
           txop=(pos>=0? txop.substr(pos+1): "");
           if(op=="NONE"){ 
             SvDef=true; Sv_Ascii=false; Sv_Binx2=false; 
-            Sv_Csv=false; Sv_Vtk=false;
+            Sv_Csv=false; Sv_Vtk=false; Sv_Flw=false;
           }
           else if(op=="BINX2"){   SvDef=true; Sv_Binx2=true; }
           else if(op=="ASCII"){   SvDef=true; Sv_Ascii=true; }
           else if(op=="CSV"){     SvDef=true; Sv_Csv=true; }
           else if(op=="VTK"){     SvDef=true; Sv_Vtk=true; }
+          else if(op=="FLW"){     SvDef=true; Sv_Flw=true; }
           else ErrorParm(opt,c,lv,file);
         }
       }

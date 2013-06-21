@@ -25,6 +25,7 @@
 #include "JSpaceEParms.h"
 #include "JSpaceParts.h"
 #include "JFormatFiles2.h"
+#include "JProbe.h"
 
 //==============================================================================
 /// Constructor.
@@ -120,6 +121,7 @@ void JSph::AllocMemory(int np){
     }
   }
 }
+
 //==============================================================================
 /// Allocates memory of floating objectcs.
 //==============================================================================
@@ -128,6 +130,24 @@ void JSph::AllocMemoryFloating(unsigned ftcount){
   if(ftcount)FtObjs=new StFloatingData[ftcount];  MemCpuStatic+=(sizeof(StFloatingData)*ftcount);
   //delete[] FtDist; FtDist=NULL;
   //if(ftnp)FtDist=new tfloat3[ftnp];                MemCpuStatic+=(sizeof(tfloat3)*ftnp);
+}
+
+//==============================================================================
+/// Allocates memory for probes arrays needed to write flw.
+//==============================================================================
+void JSph::AllocMemoryProbes(unsigned long np){
+  delete[] ProbePos;  ProbePos=NULL;
+  delete[] ProbeVel;  ProbeVel=NULL;
+  delete[] ProbeRhop; ProbeRhop=NULL;
+  if(np>0){
+    try{
+      ProbePos=new tfloat3[np];  ProbeVel=new tfloat3[np];    MemCpuStatic+=(sizeof(tfloat3)*np)*2;
+      ProbeRhop=new float[np];                           MemCpuStatic+=(sizeof(float)*np);
+    }
+    catch(const std::bad_alloc){
+      RunException("AllocMemory","Could not allocate the requested memory.");
+    }
+  }
 }
 
 //==============================================================================
@@ -251,6 +271,19 @@ void JSph::LoadCase(){
   Pdata.Config(JPartData::FmtBi2,Np,Nbound,Nfluid,Nfixed,Nmoving,Nfloat,cf.dp,cf.h,cf.b,RHOPZERO,cf.gamma,cf.massbound,cf.massfluid,Simulate2D);
 
   Log->Print("**Initial state of particles is loaded");
+
+  //-Loads initial state of probe particles if flw output requested
+  if(SvData&SDAT_Flw){
+        Log->Print("**Loading initial state of probe particles");
+        string fileg3d=DirCase+CaseName+".g3d";
+        if(!fun::FileExists(fileg3d)) RunException(met,"G3D file was not found.",fileg3d);
+        JProbe probeini(0,ProbePos,ProbeVel,ProbeRhop);
+        probeini.LoadCastNodesCountG3D(fileg3d);
+        AllocMemoryProbes(probeini.GetNProbe());
+        probeini.LoadFileG3D(fileg3d);
+        //TODO: check and/or correct position mapping
+  }
+
   CaseLoaded=true;
   BoundDatVer++;
 }
@@ -317,6 +350,10 @@ void JSph::SaveData(){
     if(SvData&SDAT_Csv)JFormatFiles2::ParticlesToCsv(DirOut+"PartCsv"+cad+".csv",Pdata.GetNp(),Pdata.GetNfixed(),Pdata.GetNmoving(),Pdata.GetNfloat(),Pdata.GetNfluid()-Pdata.GetNfluidOut(),Pdata.GetNfluidOut(),Pdata.GetPartTime(),pos,vel,rhop,NULL,NULL,id,NULL,NULL,NULL,NULL);
     if(SvData&SDAT_Vtk)JFormatFiles2::ParticlesToVtk(DirOut+"PartVtk"+cad+".vtk",Pdata.GetNp(),pos,vel,rhop,NULL,NULL,id,NULL,NULL,NULL,NULL);
   }
+  if(SvData&SDAT_Flw){
+     //TODO: TimeStep?
+     Pdata.SaveFile(JPartData::FmtFlw,DirOut);
+  }
   //-Time computation.
   if(Part>PartIni||Ndiv){   
     TimerPart.Stop();
@@ -330,7 +367,7 @@ void JSph::SaveData(){
     Log->Print(cad2);
   }
   else{
-    sprintf(cad2,"Part%s        %u particles successfully stored",cad,Np);   
+    sprintf(cad2,"Part%s        %u particles successfully stored",cad,Np);
     Log->Print(cad2);
   }
   if(Np-NpOk!=PartOut){
@@ -505,13 +542,14 @@ void JSph::Run(JCfgRun *cfg,JLog *log){
   Log=log;
 
   //-Output format options.
-  SvData=byte(SDAT_None); 
-  if(cfg->Sv_Ascii)SvData|=byte(SDAT_Sphysics);    
+  SvData=byte(SDAT_None);
+  if(cfg->Sv_Ascii)SvData|=byte(SDAT_Sphysics);
   if(cfg->Sv_Binx2)SvData|=byte(SDAT_Binx2);
   if(cfg->Sv_Csv)SvData|=byte(SDAT_Csv);
   if(cfg->Sv_Vtk)SvData|=byte(SDAT_Vtk);
+  if(cfg->Sv_Flw)SvData|=byte(SDAT_Flw);
 
-  SvDt=cfg->SvDt;   
+  SvDt=cfg->SvDt;
   SvRes=cfg->SvRes;
   SvTimers=cfg->SvTimers;
   SvSteps=false;        //-If "true", stores all the steps.
@@ -552,7 +590,7 @@ void JSph::Run(JCfgRun *cfg,JLog *log){
   if(cfg->TStep)TStep=cfg->TStep;
   if(cfg->VerletSteps>=0)VerletSteps=cfg->VerletSteps;
   if(cfg->TKernel)TKernel=cfg->TKernel;
-  if(cfg->Kgc)Kgc=(cfg->Kgc==1);     
+  if(cfg->Kgc)Kgc=(cfg->Kgc==1);
   if(cfg->TVisco){ TVisco=cfg->TVisco; Visco=cfg->Visco; }
   if(cfg->ShepardSteps>=0)ShepardSteps=cfg->ShepardSteps;
   if(cfg->DBCSteps>=0)DBCSteps=cfg->DBCSteps;
@@ -572,8 +610,8 @@ void JSph::Run(JCfgRun *cfg,JLog *log){
   if(Simulate2D){
     if(TKernel==KERNEL_Cubic){
       CubicCte.a1=float(10.0f/(PI*7.f));
-      CubicCte.a2=CubicCte.a1/H2;   
-      CubicCte.aa=CubicCte.a1/(H*H*H);       
+      CubicCte.a2=CubicCte.a1/H2;
+      CubicCte.aa=CubicCte.a1/(H*H*H);
       CubicCte.a24=0.25f*CubicCte.a2;
       CubicCte.c1=-3.0f*CubicCte.aa;
       CubicCte.d1=9.0f*CubicCte.aa/4.0f;
@@ -581,19 +619,19 @@ void JSph::Run(JCfgRun *cfg,JLog *log){
       float deltap=1.f/1.5f;
       float wdeltap=CubicCte.a2*(1.f-1.5f*deltap*deltap+0.75f*deltap*deltap*deltap);
       CubicCte.od_wdeltap=1.f/wdeltap;
-      CteShepard=CubicCte.a2;     
+      CteShepard=CubicCte.a2;
     }
     if(TKernel==KERNEL_Wendland){
       WendlandCte.awen=0.557f/(H*H);
       WendlandCte.bwen=-2.7852f/(H*H*H);
-      CteShepard=WendlandCte.awen;     
+      CteShepard=WendlandCte.awen;
     }
   }
   else{
     if(TKernel==KERNEL_Cubic){
       CubicCte.a1=float(1.0f/PI);
-      CubicCte.a2=CubicCte.a1/(H*H*H);  
-      CubicCte.aa=CubicCte.a1/(H*H*H*H);       
+      CubicCte.a2=CubicCte.a1/(H*H*H);
+      CubicCte.aa=CubicCte.a1/(H*H*H*H);
       CubicCte.a24=0.25f*CubicCte.a2;
       CubicCte.c1=-3.0f*CubicCte.aa;
       CubicCte.d1=9.0f*CubicCte.aa/4.0f;

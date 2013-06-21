@@ -63,7 +63,7 @@ public:
   int ShepardSteps;
   int DBCSteps;
   bool SvDt,SvRes,SvTimers;
-  bool Sv_Binx2,Sv_Csv,Sv_Ascii,Sv_Vtk;
+  bool Sv_Binx2,Sv_Csv,Sv_Ascii,Sv_Vtk,Sv_Flw;
   std::string CaseName,RunName,DirOut;
   std::string PartBeginDir;
   unsigned PartBegin,PartBeginFirst;

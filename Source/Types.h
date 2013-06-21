@@ -85,6 +85,7 @@ typedef enum{
     SDAT_Vtk=2,             ///<Vtk format .vtk
     SDAT_Csv=4,             ///<Csv format .csv
     SDAT_Sphysics=8,        ///<Ascii format (SPHysics code).
+    SDAT_Flw=16,            ///<Flw format (Poligon code).
     SDAT_None=0            
 }TpSaveDat;                 
 
