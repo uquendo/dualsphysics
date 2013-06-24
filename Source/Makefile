@@ -26,27 +26,29 @@ NVCC=nvcc
 NVCCFLAGS=-c $(GENCODE) -use_fast_math -O3 -I./
 NVCCLINKFLAGS=
 
+CFLAGS=-c -use_fast_math -O3 -I./ -I/usr/local/cuda/include/
+
 NVCCFLAGS := $(NVCCFLAGS) -m$(ARCH)
 NVCCLINKFLAGS := $(NVCCLINKFLAGS) -m$(ARCH)
 
 ifeq ($(WITHOMP),1)
-NVCCFLAGS := $(NVCCFLAGS) -Xcompiler -fopenmp
+CFLAGS := $(CFLAGS)  -fopenmp -g
 NVCCLINKFLAGS := $(NVCCLINKFLAGS) -Xcompiler -fopenmp -lgomp
 endif
 
 all:dualsphysics 
 	mv dualsphysics $(EXECNAME)
-	mv dualsphysics_ptxasinfo $(EXECNAME)_ptxasinfo
-	rm -rf *.o
+#	mv dualsphysics_ptxasinfo $(EXECNAME)_ptxasinfo
+#	rm -rf *.o
 
 dualsphysics: $(OBJECTS)
 	$(NVCC) ${NVCCLINKFLAGS} $(OBJECTS) -o $@ $(JLIBS)
 
 .cpp.o: 
-	$(NVCC) $(NVCCFLAGS) $< 
+	$(CXX) $(CFLAGS) $< 
 
 CudaSphApi.o: CudaSphApi.cu
-	$(NVCC) $(NVCCFLAGS) --ptxas-options -v CudaSphApi.cu 2>dualsphysics_ptxasinfo
+	$(NVCC) $(NVCCFLAGS) --ptxas-options -v CudaSphApi.cu 2>$(EXECNAME)_ptxasinfo
 
 clean:
 	rm -rf *.o DualSPHysics*

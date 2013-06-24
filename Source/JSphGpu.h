@@ -40,6 +40,7 @@ protected:
   std::string BlockSizes;     ///<Stores configuration of BlockSizes.
   StDeviceContext Dc;         ///<Structure with variables to be used on the CUDA files.
   StDeviceCte CteVars;        ///<Structure with variables to be stored in the constant memory of GPU.
+  int dev;                    ///<GpuId.
 
   void ConfigDevice();
 

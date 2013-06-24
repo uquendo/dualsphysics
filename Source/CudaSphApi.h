@@ -215,6 +215,7 @@ typedef struct{
 //-Set of functions called from the JSphGpu.cpp file and implemented in the CUDA files (.cu).
 int CsInitCuda(int gpuid,int *devdef,char *devname,StDeviceContext *dc);
 void CsInit(StDeviceContext *dc);
+void CsResetCuda(int gpuid);
 void CsReset(StDeviceContext *dc);
 void CsAllocMemoryBasic(StDeviceContext *dc,StDeviceCte *cte,bool svtimers);
 bool CsAllocMemoryCellMode(StDeviceContext *dc,StDeviceCte *cte);

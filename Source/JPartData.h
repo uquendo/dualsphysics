@@ -35,7 +35,7 @@ class JPartData : protected JObject
 {
 public:
   ///Type of format files.
-  typedef enum{ FmtNull=0,FmtBin=1,FmtBi2=2,FmtBi2Out=3,FmtAscii=4,FmtFlw=5 }TpFmtFile; 
+  typedef enum{ FmtNull=0,FmtBin=1,FmtBi2=2,FmtBi2Out=3,FmtAscii=4,FmtFlw=5}TpFmtFile; 
   typedef struct{  
     float dp,h,b,rhop0,gamma;
     float massbound,massfluid;
@@ -104,7 +104,7 @@ private:
     float timestep;
   }StHeadDatBi2;
   
-  std::string MaskFileName[4];   ///<Masks to create filenames in different formats.
+  std::string MaskFileName[5];   ///<Masks to create filenames in different formats.
 
   TpFmtFile FmtData;             ///<Current format of data. 
   // - FmtNull: Undetermined format...
@@ -139,12 +139,16 @@ private:
   unsigned Nbound;               ///<Number of boundary particles ( \ref Nfixed + \ref Nmoving + \ref Nfloat ). 
   unsigned Nfluid;               ///<Number of fluid particles (including the excluded ones).  
   unsigned NfluidOut;            ///<Number of fluid particles excluded for the current \ref PartNumber.
+  unsigned long Nprobe;          ///<Number of probe particles.
 
 
   unsigned *Id;                  ///<ID of particles.
   tfloat3 *Pos;                  ///<Position of particles.
   tfloat3 *Vel;                  ///<Velocity of particles.
   float *Rhop;                   ///<Density of particles.
+
+  tfloat3 *ProbeVel;         ///<Velocity of the probe particles (X,Y,Z).
+  float *ProbeRhop;          ///<Density of the probe particles.
 
   int *OrderOut;                 ///<Only for excluded particles, indicates the position of particle \ref Out (-1 if it is not an excluded particle).
 
@@ -170,12 +174,13 @@ public:
   JPartData();
   ~JPartData();
   void Reset();
-  void Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d=false);
+  void Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d=false,unsigned long nprobe=0);
 
-  unsigned SetDataUnsorted(unsigned part,float timepart,bool outreset,unsigned npok,unsigned nout,unsigned* id,tfloat3* pos,tfloat3* vel,float* rhop);
+  unsigned SetDataUnsorted(unsigned part,float timepart,bool outreset,unsigned npok,unsigned nout,unsigned* id,tfloat3* pos,tfloat3* vel,float* rhop,tfloat3* probevel=NULL,float* proberhop=NULL);
 
   unsigned GetDataSort(unsigned size,unsigned *id,tfloat3 *pos,tfloat3 *vel,float *rhop,bool full)const;
   void GetDataPointers(unsigned* &id,tfloat3* &pos,tfloat3* &vel,float* &rhop){ id=Id; pos=Pos; vel=Vel; rhop=Rhop; }
+  void GetDataPointers(unsigned* &id,tfloat3* &pos,tfloat3* &vel,float* &rhop,tfloat3* &probevel,float* &proberhop){ id=Id; pos=Pos; vel=Vel; rhop=Rhop; probevel=ProbeVel; proberhop=ProbeRhop; }
   
   void SortDataOut();
 
@@ -201,8 +206,8 @@ public:
 
   void SaveFileFlw(std::string file="")const;
 
-  void SetMaskFileName(TpFmtFile fmt,const std::string &mask){ if(1<=int(fmt)&&int(fmt)<=4)MaskFileName[int(fmt)-1]=mask; }
-  std::string GetMaskFileName(TpFmtFile fmt)const{ return(1<=int(fmt)&&int(fmt)<=4? MaskFileName[int(fmt)-1]: std::string("")); }
+  void SetMaskFileName(TpFmtFile fmt,const std::string &mask){ if(1<=int(fmt)&&int(fmt)<=5)MaskFileName[int(fmt)-1]=mask; }
+  std::string GetMaskFileName(TpFmtFile fmt)const{ return(1<=int(fmt)&&int(fmt)<=5? MaskFileName[int(fmt)-1]: std::string("")); }
   std::string GetFileName(TpFmtFile fmt,unsigned part,const std::string &dir)const; 
   void SetPartNumber(unsigned part){ PartNumber=part; }
   unsigned GetPartNumber()const{ return(PartNumber); }
@@ -225,6 +230,7 @@ public:
   unsigned GetNmoving()const{   return(Nmoving); }
   unsigned GetNfloat()const{    return(Nfloat); }
   unsigned GetNfluidOut()const{ return(NfluidOut); }
+  unsigned long GetNprobe()const{return(Nprobe); }
 
   unsigned GetMemoryAlloc()const;
 

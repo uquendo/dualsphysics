@@ -79,7 +79,6 @@ int CsInitCuda(int gpuid,int *devdef,char *devname,StDeviceContext *dc){
       *devdef=dev;
       int len=int(strlen(devp.name)); if(len>=64)len=63;
       for(int c=0;c<len;c++)devname[c]=devp.name[c]; devname[len]='\0';
-
       dc->mglobal=devp.totalGlobalMem;
       dc->mshared=int(devp.sharedMemPerBlock);
       dc->compute=devp.major*10+devp.minor;
@@ -107,6 +106,15 @@ int CsInitCuda(int gpuid,int *devdef,char *devname,StDeviceContext *dc){
 void CsInit(StDeviceContext *dc){
   memset(dc,0,sizeof(StDeviceContext));
   TmgCreation(dc->timers,false);
+}
+
+//==============================================================================
+/// Resets cuda.
+//==============================================================================
+void CsResetCuda(int gpuid){
+        cudaSetDevice(gpuid);
+        cudaDeviceReset();
+        CheckErrorCuda("Failed to reset device");
 }
 
 //==============================================================================

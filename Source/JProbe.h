@@ -19,5 +19,6 @@ public:
         void LoadCastNodesCountG3D(std::string filename);
         void LoadFileG3D(std::string filename);
         unsigned long GetNProbe(){ return Nprobes; };
+        void SetProbeArrays( tfloat3* Pos = NULL, tfloat3* Vel = NULL, float* Rhop = NULL){ ProbePos=Pos; ProbeVel=Vel; ProbeRhop=Rhop; };
 };
 

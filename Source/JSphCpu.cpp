@@ -1428,7 +1428,7 @@ void JSphCpu::SaveData(){
   //-Updates Pdata.
   unsigned nout=Div->GetOutCount();
   if(nout)Div->GetDataOut(Idp,Pos,Vel,Rhop,true);
-  if(Pdata.SetDataUnsorted(Part,TimeStep,false,NpOk,nout,Idp,Pos,Vel,Rhop))RunException(met,"Some excluded particles appear again in the simulation.");
+  if(Pdata.SetDataUnsorted(Part,TimeStep,false,NpOk,nout,Idp,Pos,Vel,Rhop,ProbeVel,ProbeRhop))RunException(met,"Some excluded particles appear again in the simulation.");
   JSph::SaveData();
   TmcStop(Timers,TMC_SuSavePart);
 }

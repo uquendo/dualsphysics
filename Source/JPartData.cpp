@@ -46,11 +46,13 @@ using std::endl;
 JPartData::JPartData(){
   ClassName="JPartData";
   Id=NULL; Pos=NULL; Vel=NULL; Rhop=NULL; OrderOut=NULL;
+  ProbeVel=NULL; ProbeRhop=NULL;
   Out=NULL;
   SetMaskFileName(FmtBin,"PartBinx_%04d.bin");
   SetMaskFileName(FmtBi2,"Part%04d.bi2");
   SetMaskFileName(FmtBi2Out,"PartOut.bi2");
   SetMaskFileName(FmtAscii,"PART_%04d");
+  SetMaskFileName(FmtFlw,"Part.flw");
   Reset();
 }
 
@@ -81,13 +83,14 @@ void JPartData::Reset(){
   Nbound=0; Nfluid=0;
   NfluidOut=0;
   Nfixed=0; Nmoving=0; Nfloat=0;
+  Nprobe=0;
   memset(&ConfigInfo,0,sizeof(StConfig));
 }
 
 //==============================================================================
 /// Sets the basic setup.
 //==============================================================================
-void JPartData::Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d){
+void JPartData::Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d,unsigned long nprobe){
   const char met[]="Config";
   Reset();
   if(nbound+nfluid!=np||nfixed+nmoving+nfloat!=nbound)RunException(met,"Error in the number of particles of each type.");
@@ -96,12 +99,15 @@ void JPartData::Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid
   SetConfigInfo(dp,h,b,rhop0,gamma,massbound,massfluid);
   Np=np; Nbound=nbound; Nfluid=nfluid;
   Nfixed=nfixed; Nmoving=nmoving; Nfloat=nfloat;
+  Nprobe=nprobe;
   try{
     Id=new unsigned[Np];        
     Pos=new tfloat3[Np];       
     Vel=new tfloat3[Np];  
     Rhop=new float[Np];       
-    OrderOut=new int[Nfluid]; 
+    OrderOut=new int[Nfluid];
+    ProbeVel=new tfloat3[Nprobe];
+    ProbeRhop=new float[Nprobe];
   }
   catch(const std::bad_alloc){
     RunException(met,"Cannot allocate the requested memory.");
@@ -129,7 +135,7 @@ unsigned JPartData::GetMemoryAlloc()const{
 /// Modifies particle data. 
 /// Returns true if any particle was not excluded, when previous data were.
 //==============================================================================
-unsigned JPartData::SetDataUnsorted(unsigned part,float timepart,bool outreset,unsigned npok,unsigned nout,unsigned* id,tfloat3* pos,tfloat3* vel,float* rhop){
+unsigned JPartData::SetDataUnsorted(unsigned part,float timepart,bool outreset,unsigned npok,unsigned nout,unsigned* id,tfloat3* pos,tfloat3* vel,float* rhop,tfloat3* probevel,float* proberhop){
   const char met[]="SetDataUnsorted";
   unsigned errout=0;
   if(!DataConfigOk())RunException(met,"Initial configuration missing.");
@@ -216,8 +222,14 @@ unsigned JPartData::SetDataUnsorted(unsigned part,float timepart,bool outreset,u
       else xid++;
     } 
 #endif
+    //-Modifies probe particles
+    if((probevel!=NULL)&&(proberhop!=NULL)){
+            for(unsigned long ppn=0; ppn<Nprobe; ppn++){
+                    ProbeVel[ppn]=probevel[ppn]; ProbeRhop[ppn]=proberhop[ppn];
+            }
+    }
   }
-  else RunException(met,"This method is not implmentd for the format BINX-20.");
+  else RunException(met,"This method is not implmented for the format BINX-20.");
   DataBound=true;
   return(errout);
 }
@@ -270,17 +282,70 @@ void JPartData::SaveFileFlw(std::string file) const{
   if(!DataBoundOk())RunException(met,"Boundary particles data missing.");
   if(NfluidOut>OutCount)RunException(met,"Excluded particles data missing.");
   if(file.empty())file=GetFileName(FmtFlw,GetPartNumber(),"");
-  ifstream pf;
-  pf.open(file.c_str());
+  if(!fun::FileExists(file)){
+        printf("Creating new .flw file...\n\n");
+        //write header from .flw.tpl and .g3d files in case directory
+        string fbase=fun::GetWithoutExtension(file);
+        string filetpl=fbase+".flw.tpl";
+        string fileg3d=fbase+".g3d";
+        ofstream pf_head;
+        pf_head.open(file.c_str());
+        if(!pf_head) RunException(met,"Cannot open the file.",file);
+        ifstream pf_tpl;
+        pf_tpl.open(filetpl.c_str());
+        if(pf_tpl){
+                pf_head << pf_tpl.rdbuf();
+                if(pf_head.fail())RunException(met,"File writing failure.",file);
+                pf_tpl.close();
+        }else RunException(met,"Cannot open the file.",filetpl);
+        ifstream pf_g3d;
+        pf_g3d.open(fileg3d.c_str());
+        if(pf_g3d){
+                pf_head << "\n" <<
+                        "{*** SURFACE_GEOMETRY section intensionaly left blank ***}\n" << 
+                        "#\n" << 
+                        "SURFACE_GEOMETRY:\n" << 
+                        "0 0 - SumPoints_SumElements\n" <<
+                        "-***-\n" <<
+                        "DATA GEOMETRY\n" << 
+                        fileg3d << "\n" <<
+                        pf_g3d.rdbuf() <<
+                        "\n"
+                        "-***-\n" <<
+                        "DATA CALCULATION\n";
+                if(pf_head.fail())RunException(met,"File writing failure.",file);
+                pf_g3d.close();
+        }else RunException(met,"Cannot open the file.",fileg3d);
+        pf_head.close();
+  }
+  ofstream pf;
+  pf.open(file.c_str(),ios::app);
   if(pf){
     //TODO: write all the stuff
-    char buf[4096];
-    
-
+    unsigned long i=0;
+    pf.precision(6);
+    pf << "\n" <<
+          "#\n" <<
+          GetPartTime() << "\n";
+    for(i=0;i<Nprobe;i++){
+        if ((i>0)&&(i%15==0)) pf << "\n";
+        pf << int(ProbeRhop[i]) << " ";
+    }
+    pf << "\n#1\n" <<
+          Nprobe << "\n";
+    for(i=0;i<Nprobe;i++){
+        if ((i>0)&&(i%5==0)) pf << "\n";
+        pf << ProbeVel[i].x << " " << ProbeVel[i].y << " " << ProbeVel[i].z << " ";
+    }
+    pf << "\n#2\n" << 
+          Nprobe << "\n";
+    for(i=0;i<Nprobe;i++){
+        if ((i>0)&&(i%15==0)) pf << "\n";
+        pf << int(ProbeRhop[i]) << " ";
+    } //WTF?! do we really need to write density array twice?!
     if(pf.fail())RunException(met,"File writing failure.",file);
     pf.close();
   } else RunException(met,"Cannot open the file.",file);
-
 }
 
 //==============================================================================

@@ -33,7 +33,8 @@
 JSph::JSph(){
   ClassName="JSph";
   TStep=STEP_None;
-  Idp=NULL; Ridp=NULL; Pos=NULL; Vel=NULL; Rhop=NULL; 
+  Idp=NULL; Ridp=NULL; Pos=NULL; Vel=NULL; Rhop=NULL;
+  ProbePos=NULL; ProbeVel=NULL; ProbeRhop=NULL;
   DtPf=NULL;
   FtObjs=NULL;
   Motion=new JSphMotion();
@@ -76,7 +77,7 @@ void JSph::Reset(){
   DirOut="";
   PartBeginDir=""; PartBegin=0; PartBeginFirst=0;
   Np=0; Nbound=0; Nfixed=0; Nmoving=0; Nfloat=0; Nfluid=0; H=0; NpOk=0;
-  Npb=0;
+  Npb=0; Nprobe=0;
   Part=0; Ndiv=0;
   IncZ=0.f;
   DtModif=0;
@@ -267,22 +268,23 @@ void JSph::LoadCase(){
   if(pdini.GetNfluidOut())RunException(met,"Particles OUT are not allowed in the initial case file.");
   NpOk=Np;
 
-  //-Prepares Pdata for the maintenance of the particles.
-  Pdata.Config(JPartData::FmtBi2,Np,Nbound,Nfluid,Nfixed,Nmoving,Nfloat,cf.dp,cf.h,cf.b,RHOPZERO,cf.gamma,cf.massbound,cf.massfluid,Simulate2D);
-
-  Log->Print("**Initial state of particles is loaded");
-
   //-Loads initial state of probe particles if flw output requested
   if(SvData&SDAT_Flw){
         Log->Print("**Loading initial state of probe particles");
-        string fileg3d=DirCase+CaseName+".g3d";
+        string fileg3d=DirCase+"Part.g3d";
         if(!fun::FileExists(fileg3d)) RunException(met,"G3D file was not found.",fileg3d);
-        JProbe probeini(0,ProbePos,ProbeVel,ProbeRhop);
+        JProbe probeini;
         probeini.LoadCastNodesCountG3D(fileg3d);
-        AllocMemoryProbes(probeini.GetNProbe());
+        Nprobe=probeini.GetNProbe();
+        AllocMemoryProbes(Nprobe);
+        probeini.SetProbeArrays(ProbePos,ProbeVel,ProbeRhop);
         probeini.LoadFileG3D(fileg3d);
         //TODO: check and/or correct position mapping
   }
+
+  //-Prepares Pdata for the maintenance of the particles.
+  Pdata.Config(JPartData::FmtBi2,Np,Nbound,Nfluid,Nfixed,Nmoving,Nfloat,cf.dp,cf.h,cf.b,RHOPZERO,cf.gamma,cf.massbound,cf.massfluid,Simulate2D,Nprobe);
+  Log->Print("**Initial state of particles is loaded");
 
   CaseLoaded=true;
   BoundDatVer++;

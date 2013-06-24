@@ -28,6 +28,7 @@
 JSphGpu::JSphGpu(){
   ClassName="JSphGpu";
   Cpu=false;
+  dev=0;
   CsInit(&Dc);
 }
 
@@ -44,6 +45,7 @@ JSphGpu::~JSphGpu(){
 void JSphGpu::Reset(){
   JSph::Reset();
   CsReset(&Dc);
+  CsResetCuda(dev);
   BlockSizes="";
 }
 
@@ -369,7 +371,6 @@ void JSphGpu::InitVars(){
 void JSphGpu::Run(JCfgRun *cfg,JLog *log){
   const char* met="Run";
   char cad[256],devname[128];
-  int dev;
   if(CsInitCuda(cfg->GpuId,&dev,devname,&Dc))RunException(met,"Failure cuda device Initialisation.");
   log->Print("[GPU Hardware]");
   if(cfg->GpuId<0)sprintf(cad,"Device default: %d?  \"%s\"",dev,devname);
@@ -485,7 +486,7 @@ void JSphGpu::SaveData(){
   TmgStart(Dc.timers,TMG_SuSavePart);
   unsigned nout=Dc.outcount;
   if(nout)CsOutGetData(&Dc,Idp+NpOk,(float3*)Pos+NpOk,(float3*)Vel+NpOk,Rhop+NpOk);
-  if(Pdata.SetDataUnsorted(Part,TimeStep,false,NpOk,nout,Idp,Pos,Vel,Rhop))RunException(met,"Some excluded particles appear again in the simulation.");
+  if(Pdata.SetDataUnsorted(Part,TimeStep,false,NpOk,nout,Idp,Pos,Vel,Rhop,ProbeVel,ProbeRhop))RunException(met,"Some excluded particles appear again in the simulation.");
   JSph::SaveData();
   TmgStop(Dc.timers,TMG_SuSavePart);
 }
