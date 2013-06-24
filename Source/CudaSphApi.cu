@@ -151,6 +151,10 @@ void CsReset(StDeviceContext *dc){
   cudaFree(dc->cellbegb); cudaFree(dc->cellbegf);
   cudaFree(dc->cellnvb); cudaFree(dc->cellnvf);
   cudaFree(dc->pospres); cudaFree(dc->velrhop);
+  //-Probe particles.
+  cudaFree(dc->probepos);
+  cudaFree(dc->probevel);
+  cudaFree(dc->proberhop);
   //-Excluded particles Out (host).
   delete[] dc->outidp;
   delete[] dc->outpos;
@@ -269,6 +273,10 @@ void CsAllocMemoryBasic(StDeviceContext *dc,StDeviceCte *cte,bool svtimers){
     m+=AllocMemory(dc->npf,&dc->fdrhop);
   }
   m+=AllocMemory(dc->np,&dc->reduaux);
+  if(dc->nprobe){
+    m+=AllocMemory(dc->nprobe,&dc->probepos,&dc->probevel);
+    m+=AllocMemory(dc->nprobe,&dc->proberhop);
+  }
   dc->memgpu=m; //-Allocated GPU memory.
   CheckErrorCuda("Failed allocation of basic GPU memory.");
   TmgCreation(dc->timers,svtimers);
@@ -345,7 +353,7 @@ void CsUpCte(StDeviceCte *cte){
 //==============================================================================
 /// Copies data to GPU to start simulation.
 //==============================================================================
-void CsUpData(StDeviceContext *dc,StDeviceCte *cte,unsigned *idp,float3 *pos,float3 *vel,float *rhop){
+void CsUpData(StDeviceContext *dc,StDeviceCte *cte,unsigned *idp,float3 *pos,float3 *vel,float *rhop,float3 *probepos){
   cudaMemcpy(dc->pos,pos,sizeof(float3)*dc->npok,cudaMemcpyHostToDevice);
   cudaMemcpy(dc->vel,vel,sizeof(float3)*dc->npok,cudaMemcpyHostToDevice);
   cudaMemcpy(dc->rhop,rhop,sizeof(float)*dc->npok,cudaMemcpyHostToDevice);
@@ -364,6 +372,9 @@ void CsUpData(StDeviceContext *dc,StDeviceCte *cte,unsigned *idp,float3 *pos,flo
   }
   if(dc->tvisco==VISCO_LaminarSPS)cudaMemset(dc->tau,0,sizeof(tsymatrix3f)*dc->npf);
   if(dc->nfloat)CsInitFloating(dc);
+  if(dc->nprobe){
+    cudaMemcpy(dc->probepos,probepos,sizeof(float3)*dc->nprobe,cudaMemcpyHostToDevice);
+  }
   CheckErrorCuda("Initialising variables for simulation.");
 }
 
@@ -503,10 +514,4 @@ unsigned ReduMaxU(unsigned ndata,unsigned* data,unsigned* resu){
   else cudaMemcpy(&resf,data,sizeof(unsigned),cudaMemcpyDeviceToHost);
   return(resf);
 }
-
-
-
-
-
-
 

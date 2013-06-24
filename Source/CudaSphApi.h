@@ -38,6 +38,7 @@ inline tfloat3 TFloat3(const float3& v){ return(TFloat3(v.x,v.y,v.z)); }
 
 typedef enum{DV_Fluid,DV_All}CsTypeDivide;
 typedef enum{IT_FluidFluid=10,IT_FluidBound=11,IT_BoundFluid=12}CsTypeInterac;
+typedef enum{PR_Fluid,PR_All}CsTypeProbe;
 
 ///Structure with variables to be stored in the constant memory of GPU.
 typedef struct{
@@ -77,6 +78,7 @@ typedef struct{
   unsigned nfloat;           ///<Number of floating boundary particles. 
   unsigned nbound;           ///<Number of boundary particles ( \ref nfixed + \ref nmoving + \ref nfloat ).
   unsigned nfluid;           ///<Number of fluid particles (including the excluded ones).   
+  unsigned long nprobe;      ///<Number of probe particles.
 
   //-Variables on GPU.
   unsigned npok;             ///<Number of total particles activated at each time step (\ref np - excluded particles). 
@@ -125,6 +127,11 @@ typedef struct{
   unsigned bounddivver;      ///<Version of neighbour list (NL) to be compared with \ref BoundDatVer to know when the NL for boundaries must be computed.
    
   unsigned lastdivall;       ///<Indicates the type of the last NL (1==DV_All, 0==DV_Fluid).
+
+  //-Probe particle data [nprobe].
+  float3 *probepos;               ///<Position of the particles (X,Y,Z).
+  float3 *probevel;               ///<Velocity of the particles (X,Y,Z).
+  float *proberhop;               ///<Density of the particles.
 
   //-Particle data [np].
   unsigned *idp;             ///<Particle identifier according to its position in data.
@@ -220,8 +227,9 @@ void CsReset(StDeviceContext *dc);
 void CsAllocMemoryBasic(StDeviceContext *dc,StDeviceCte *cte,bool svtimers);
 bool CsAllocMemoryCellMode(StDeviceContext *dc,StDeviceCte *cte);
 void CsUpCte(StDeviceCte *cte);
-void CsUpData(StDeviceContext *dc,StDeviceCte *cte,unsigned *idp,float3 *pos,float3 *vel,float *rhop);
+void CsUpData(StDeviceContext *dc,StDeviceCte *cte,unsigned *idp,float3 *pos,float3 *vel,float *rhop,float3 *probepos=NULL);
 void CsDownData(StDeviceContext *dc,unsigned pini,unsigned *idp,float3 *pos,float3 *vel,float *rhop);
+void CsDownDataProbe(StDeviceContext *dc,unsigned pini,unsigned *idp,float3 *pos,float3 *vel,float *rhop,float3 *probevel, float *proberhop);
 void CsDownDataRhop(StDeviceContext *dc,float *rhop);
 void CsCallDivide(CsTypeDivide tdiv,StDeviceContext *dc,StDeviceCte *cte);
 void CsOutGetData(StDeviceContext *dc,unsigned *idp,float3 *pos,float3 *vel,float *rhop);
@@ -233,7 +241,7 @@ void CsCalcRidpmv(StDeviceContext *dc);
 void CsMoveLinBound(StDeviceContext *dc,unsigned pini,unsigned npar,float3 mvsimple,float3 mvvel);
 void CsMoveMatBound(StDeviceContext *dc,unsigned pini,unsigned npar,tmatrix4f mvmatrix,float dt);
 void CsCallRunShepard(StDeviceContext *dc,StDeviceCte *cte);
-
+void CsCallComputeProbes(CsTypeProbe tprobe, StDeviceContext *dc,StDeviceCte *cte);
 #endif
 
 

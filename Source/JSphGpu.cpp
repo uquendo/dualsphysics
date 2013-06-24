@@ -326,7 +326,7 @@ void JSphGpu::ConfigDevice(){
   Dc.nctotmax=Nct+1;
   Dc.simulate2d=(Simulate2D? 1: 0);
   Dc.np=Np; Dc.nbound=Nbound; Dc.nfluid=Nfluid; Dc.nfixed=Nfixed; Dc.nmoving=Nmoving; Dc.nfloat=Nfloat;
-  Dc.npok=NpOk; Dc.npb=Npb; Dc.npf=NpOk-Npb; 
+  Dc.npok=NpOk; Dc.npb=Npb; Dc.npf=NpOk-Npb; Dc.nprobe=Nprobe; 
   Dc.massbound=MassBound; Dc.massfluid=MassFluid;
   Dc.bounddatver=BoundDatVer; Dc.bounddivver=0;
   Dc.ndiv=0;
@@ -357,7 +357,7 @@ void JSphGpu::ConfigDevice(){
 /// Initialisation of arrays and variables for the execution.
 //==============================================================================
 void JSphGpu::InitVars(){
-  CsUpData(&Dc,&CteVars,Idp,(float3*)Pos,(float3*)Vel,Rhop);
+  CsUpData(&Dc,&CteVars,Idp,(float3*)Pos,(float3*)Vel,Rhop,(float3*)ProbePos);
   CsUpCte(&CteVars);
   if(TStep==STEP_Verlet)Dc.verletstep=0;
   if(TStep==STEP_Symplectic)Dc.dtpre=DtIni;
@@ -480,7 +480,10 @@ void JSphGpu::SaveData(){
   const char met[]="SaveData";
   GetVarsDevice();
   unsigned pini=(BoundDatVer<Dc.bounddatver? 0: Npb);
-  CsDownData(&Dc,pini,Idp,(float3*)Pos,(float3*)Vel,Rhop);  
+  if(Nprobe){
+        CsCallComputeProbes(PR_All,&Dc,&CteVars);
+        CsDownDataProbe(&Dc,pini,Idp,(float3*)Pos,(float3*)Vel,Rhop,(float3*)ProbeVel,ProbeRhop);
+  } else CsDownData(&Dc,pini,Idp,(float3*)Pos,(float3*)Vel,Rhop);
   BoundDatVer=Dc.bounddatver;
   //-Updates Pdata.
   TmgStart(Dc.timers,TMG_SuSavePart);

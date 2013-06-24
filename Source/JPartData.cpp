@@ -321,9 +321,8 @@ void JPartData::SaveFileFlw(std::string file) const{
   ofstream pf;
   pf.open(file.c_str(),ios::app);
   if(pf){
-    //TODO: write all the stuff
     unsigned long i=0;
-    pf.precision(6);
+    pf.precision(10);
     pf << "\n" <<
           "#\n" <<
           GetPartTime() << "\n";

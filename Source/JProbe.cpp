@@ -17,10 +17,11 @@ void JProbe::LoadFileG3D(std::string filename)
         std::ifstream pf;
         pf.open(filename.c_str());
         if(pf) {
+                pf.ignore(256,'\n');
                 float fpx,fpy,fpz; unsigned long n;
                 for(unsigned i=0;i<Nprobes;i++){
                         pf >> fpx >> fpy >> fpz >> n;
-                        ProbePos[n]=TFloat3(fpx,fpy,fpz);
+                        ProbePos[i]=TFloat3(fpx,fpy,fpz);
                 }
                 if(pf.fail()) RunException(met,"Error reading data file.",filename);
                 pf.close();

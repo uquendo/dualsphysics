@@ -152,6 +152,8 @@ protected:
   float ComputeStep_Ver(bool rhopbound);
   float ComputeStep_Sym(bool rhopbound);
 
+  void ComputeProbes();
+
   void RunShepard();
   void RunMotion(float stepdt);
   void InitFloating();

@@ -688,6 +688,7 @@ void JSph::VisuConfig(){
   Log->Print(fun::VarStr("Nfixed",Nfixed));
   Log->Print(fun::VarStr("Nmoving",Nmoving));
   Log->Print(fun::VarStr("Nfloat",Nfloat));
+  Log->Print(fun::VarStr("Nprobe",Nprobe));
   Log->Print(fun::VarStr("Dx",Dp));
   Log->Print(fun::VarStr("H",H));
   Log->Print(fun::VarStr("CteB",CteB));

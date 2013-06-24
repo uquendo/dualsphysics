@@ -172,6 +172,11 @@ std::string VarStr(const std::string &name,unsigned value){
   sprintf(cad,"=%u",value);
   return(name+cad);
 }
+std::string VarStr(const std::string &name,unsigned long value){
+  char cad[60];
+  sprintf(cad,"=%lu",value);
+  return(name+cad);
+}
 std::string VarStr(const std::string &name,int n,const int* values,std::string size){
   std::string tex=name+"["+(size=="¿?"? IntStr(n): size)+"]=[";
   for(int c=0;c<n;c++)tex=tex+(c? ",": "")+fun::IntStr(values[c]);

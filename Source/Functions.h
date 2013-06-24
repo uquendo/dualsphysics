@@ -53,6 +53,7 @@ std::string VarStr(const std::string &name,tfloat3 value);
 std::string VarStr(const std::string &name,bool value);
 std::string VarStr(const std::string &name,int value);
 std::string VarStr(const std::string &name,unsigned value);
+std::string VarStr(const std::string &name,unsigned long value);
 
 std::string VarStr(const std::string &name,int n,const int* values,std::string size="¿?");
 std::string VarStr(const std::string &name,int n,const float* values,std::string size="¿?",const char* fmt="%f");
