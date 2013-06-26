@@ -339,7 +339,7 @@ void JPartData::SaveFileFlw(std::string file) const{
     pf << "\n#2\n" << 
           Nprobe << "\n";
     for(i=0;i<Nprobe;i++){
-        if ((i>0)&&(i%15==0)) pf << "\n";
+        if ((i>0)&&(i%5==0)) pf << "\n";
         pf << int(ProbeRhop[i]) << " ";
     } //WTF?! do we really need to write density array twice?!
     if(pf.fail())RunException(met,"File writing failure.",file);
