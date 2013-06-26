@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cstring>
 
-JProbe::JProbe(unsigned long np, tfloat3* Pos, tfloat3* Vel, float* Rhop) : Nprobes(np), ProbePos(Pos), ProbeVel(Vel), ProbeRhop(Rhop)
+JProbe::JProbe(unsigned np, tfloat3* Pos, tfloat3* Vel, float* Rhop) : Nprobes(np), ProbePos(Pos), ProbeVel(Vel), ProbeRhop(Rhop)
 {
 }
 
@@ -18,7 +18,7 @@ void JProbe::LoadFileG3D(std::string filename)
         pf.open(filename.c_str());
         if(pf) {
                 pf.ignore(256,'\n');
-                float fpx,fpy,fpz; unsigned long n;
+                float fpx,fpy,fpz; unsigned n;
                 for(unsigned i=0;i<Nprobes;i++){
                         pf >> fpx >> fpy >> fpz >> n;
                         ProbePos[i]=TFloat3(fpx,fpy,fpz);

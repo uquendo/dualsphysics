@@ -18,8 +18,8 @@ OBJ_GPU=JPtxasInfo.o JSphGpu.o
 
 OBJECTS=$(OBJ_CPU) $(OBJ_GPU) $(OBJ_CUDA)
 
-GENCODE:=$(GENCODE) -gencode=arch=compute_10,code=\"sm_10,compute_10\"
-GENCODE:=$(GENCODE) -gencode=arch=compute_12,code=\"sm_12,compute_12\"
+#GENCODE:=$(GENCODE) -gencode=arch=compute_10,code=\"sm_10,compute_10\"
+#GENCODE:=$(GENCODE) -gencode=arch=compute_12,code=\"sm_12,compute_12\"
 GENCODE:=$(GENCODE) -gencode=arch=compute_20,code=\"sm_20,compute_20\"
 
 NVCC=nvcc
@@ -32,7 +32,7 @@ NVCCFLAGS := $(NVCCFLAGS) -m$(ARCH)
 NVCCLINKFLAGS := $(NVCCLINKFLAGS) -m$(ARCH)
 
 ifeq ($(WITHOMP),1)
-CFLAGS := $(CFLAGS)  -fopenmp -g
+CFLAGS := $(CFLAGS)  -fopenmp
 NVCCLINKFLAGS := $(NVCCLINKFLAGS) -Xcompiler -fopenmp -lgomp
 endif
 

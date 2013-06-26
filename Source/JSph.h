@@ -109,7 +109,7 @@ protected:
   unsigned Npb;              ///<Number of particles of the boundary block ( \ref Nbound - \ref Nfloat ) or ( \ref Nfixed + \ref Nmoving).
   unsigned Nfluid;           ///<Number of fluid particles (including the excluded ones). 
   unsigned NpOk;             ///<Number of total particles activated at each time step (\ref Np - excluded particles). 
-  unsigned long Nprobe;      ///<Number of probe particles.
+  unsigned Nprobe;      ///<Number of probe particles.
  
   float H;                   ///<Smoothing length (=coef*sqrt(dx*dx+dy*dy+dz*dz))
   float CteB;                ///<Constant that sets a limit for the maximum change in density.
@@ -195,7 +195,7 @@ protected:
   void Reset();
   void AllocMemory(int np);
   void AllocMemoryFloating(unsigned ftcount);
-  void AllocMemoryProbes(unsigned long np);
+  void AllocMemoryProbes(unsigned np);
   void LoadCase();
   void LoadPartBegin();
 

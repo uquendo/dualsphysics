@@ -548,8 +548,8 @@ void CsMoveMatBound(StDeviceContext *dc,unsigned pini,unsigned npar,tmatrix4f mv
 //==============================================================================
 /// Modifies density and velocity of probe particle iterating over some set of neighbours
 //==============================================================================
-template<TpKernel tkernel> __device__ void KerComputeProbesBox(const unsigned &pini, const unsigned &pfin, const float3* pos_box, const float3* vel_box, const float* rhop_box, const float3 &pospr, float3 &velpr, float &rhoppr){
-  for(int p_box=pini;p_box<pfin;p_box++){
+template<TpKernel tkernel> __device__ void KerComputeProbesBox(const unsigned &pini, const unsigned &pfin, const float3* pos_box, const float3* vel_box, const float* rhop_box, const float3 &pospr, float3* velpr, float* rhoppr, unsigned n){
+  for(unsigned p_box=pini;p_box<pfin;p_box++){
     float3 dr=make_float3(pospr.x,pospr.y,pospr.z);
     dr.x-=pos_box[p_box].x;  dr.y-=pos_box[p_box].y;  dr.z-=pos_box[p_box].z;
     float  rr2=dr.x*dr.x+dr.y*dr.y+dr.z*dr.z;
@@ -567,25 +567,55 @@ template<TpKernel tkernel> __device__ void KerComputeProbesBox(const unsigned &p
 
           fac=CTE.wendland_bwen*qq*wqq1*wqq1*wqq1;
         }
-        rhoppr+=rhop_box[p_box]*fac;
-        velpr.x+=vel_box[p_box].x*fac;
-        velpr.y+=vel_box[p_box].y*fac;
-        velpr.z+=vel_box[p_box].z*fac;
+        rhoppr[n]+=rhop_box[p_box]*fac;
+        velpr[n].x+=vel_box[p_box].x*fac;
+        velpr[n].y+=vel_box[p_box].y*fac;
+        velpr[n].z+=vel_box[p_box].z*fac;
+//        printf("KerComputeProbesBox: fac=%f,rhop=%f,vel=%f,%f,%f\n",fac,rhoppr[n],velpr[n].x,velpr[n].y,velpr[n].z);
     }
   }
 }
 
-
 //==============================================================================
-/// Kernel actualy updating density and velocity of probe particles
+/// Kernel actualy updating density and velocity of probe particles for CELLMODE_Hneigs
 //==============================================================================
-template<CsTypeProbe _tprobe, TpKernel tkernel, unsigned hdiv> __global__  void KerComputeProbes(const unsigned long npr, const float3* prpos, float3* prvel, float* prrhop, const float3* pos, const float3* vel, const float* rhop, const int2* cellbegf,const int2* cellbegb, const unsigned nct, const unsigned ncx,const unsigned ncy,const unsigned ncz,const int nsheet,const float ovscell,const float3 posmin,const float3 difmax){
-  unsigned long p=blockIdx.y*gridDim.x*blockDim.x + blockIdx.x*blockDim.x + threadIdx.x;
+template <CsTypeProbe _tprobe, TpKernel tkernel, unsigned ncellnv> __global__  void KerComputeProbesNeighs(const unsigned npr, const float3* prpos, float3* prvel, float* prrhop, const float3* pos, const float3* vel, const float* rhop, const unsigned ncells, const uint2* cellnvf,const uint2* cellnvb, const unsigned nct, const unsigned ncx,const unsigned ncy,const unsigned ncz,const int nsheet,const float ovscell,const float3 posmin,const float3 difmax){
+  unsigned p=blockIdx.y*gridDim.x*blockDim.x + blockIdx.x*blockDim.x + threadIdx.x;
   if(p<npr){
     //-Calculating cell id of probe
     const float3 rpos=prpos[p];
     const float dx=rpos.x-posmin.x,dy=rpos.y-posmin.y,dz=rpos.z-posmin.z;
-    const int cel=((dx>=0 && dy>=0 && dz>=0 && dx<difmax.x && dy<difmax.y && dz<difmax.z)? int(dx*ovscell)+int(dy*ovscell)*ncx+int(dz*ovscell)*nsheet: nct);
+    const int cel=int(dx*ovscell)+int(dy*ovscell)*ncx+int(dz*ovscell)*nsheet;
+    if(dx>=0 && dy>=0 && dz>=0 && dx<difmax.x && dy<difmax.y && dz<difmax.z && cel<nct){
+    //-Interaction with fluid particles.
+    uint2 rg;
+    for(int r=0;r<ncellnv;r++){
+      rg=(!r||rg.y? cellnvf[r*ncells+cel]: make_uint2(0,0));
+//      printf("KerComputeProbesNeighs: p=%u,cel=%d,r=%d,rg=%u,%u,nc=%u,%u,%u,ncells=%u,cid=%u,cidmax=%u,nct=%u\n",p,cel,r,rg.x,rg.y,ncx,ncy,ncz,ncells,r*ncells+cel,(nct-1)*ncellnv,nct);
+      if(rg.y) KerComputeProbesBox<tkernel>(rg.x,rg.y,pos,vel,rhop,rpos,prvel,prrhop,p);
+    }
+    if(_tprobe==PR_All){
+    //-Interaction with boundaries.
+    for(int r=0;r<ncellnv;r++){
+      rg=(!r||rg.y? cellnvb[r*ncells+cel]: make_uint2(0,0));
+      if(rg.y)KerComputeProbesBox<tkernel>(rg.x,rg.y,pos,vel,rhop,rpos,prvel,prrhop,p);
+    }
+    }
+    }
+  }
+}
+
+//==============================================================================
+/// Kernel actualy updating density and velocity of probe particles
+//==============================================================================
+template<CsTypeProbe _tprobe, TpKernel tkernel, unsigned hdiv> __global__  void KerComputeProbes(const unsigned npr, const float3* prpos, float3* prvel, float* prrhop, const float3* pos, const float3* vel, const float* rhop, const int2* cellbegf,const int2* cellbegb, const unsigned nct, const unsigned ncx,const unsigned ncy,const unsigned ncz,const int nsheet,const float ovscell,const float3 posmin,const float3 difmax){
+  unsigned p=blockIdx.y*gridDim.x*blockDim.x + blockIdx.x*blockDim.x + threadIdx.x;
+  if(p<npr){
+    //-Calculating cell id of probe
+    const float3 rpos=prpos[p];
+    const float dx=rpos.x-posmin.x,dy=rpos.y-posmin.y,dz=rpos.z-posmin.z;
+    const int cel=int(dx*ovscell)+int(dy*ovscell)*ncx+int(dz*ovscell)*nsheet;
+    if(dx>=0 && dy>=0 && dz>=0 && dx<difmax.x && dy<difmax.y && dz<difmax.z && cel<nct){
     //-Obtaining limits of interaction.
     int cx=cel%ncx;
     int cz=int(cel/(ncx*ncy));
@@ -609,7 +639,7 @@ template<CsTypeProbe _tprobe, TpKernel tkernel, unsigned hdiv> __global__  void 
             pfin=cbeg.y;
           }
         }
-        if(pfin)KerComputeProbesBox<tkernel>(pini,pfin,pos,vel,rhop,rpos,prvel[p],prrhop[p]);
+        if(pfin)KerComputeProbesBox<tkernel>(pini,pfin,pos,vel,rhop,rpos,prvel,prrhop,p);
       }
     }
     if(_tprobe==PR_All){
@@ -626,8 +656,9 @@ template<CsTypeProbe _tprobe, TpKernel tkernel, unsigned hdiv> __global__  void 
             pfin=cbeg.y;
           }
         }
-        if(pfin)KerComputeProbesBox<tkernel>(pini,pfin,pos,vel,rhop,rpos,prvel[p],prrhop[p]);
+        if(pfin)KerComputeProbesBox<tkernel>(pini,pfin,pos,vel,rhop,rpos,prvel,prrhop,p);
       }
+    }
     }
     }
   }
@@ -640,30 +671,29 @@ template<TpCellMode cellmode, CsTypeProbe tprobe, TpKernel tkernel, unsigned nce
   //KerPreComputeProbes?
   cudaMemset(dc->probevel,0,sizeof(float3)*dc->nprobe);
   cudaMemset(dc->proberhop,0,sizeof(float)*dc->nprobe);
+  CheckErrorCuda("Failed zeroing data on GPU.");
   unsigned bsize=BLOCKSIZE;
   // unsigned bsize=dc->bsprobes; //TODO: blocks from ptxas
   dim3 sgridp=CsGetGridSize(dc->nprobe,bsize);
-
   switch(dc->cellmode){
     case CELLMODE_Hneigs:{
             //TmgStart(dc->timers,TMG_SuProbes);
-            //TODO: change KerComputeProbes -> KerComputeProbesNeighs
-            KerComputeProbes<tprobe,tkernel, ncellnv> <<<sgridp,bsize>>>(dc->nprobe,dc->probepos,dc->probevel,dc->proberhop,dc->pos, dc->vel,dc->rhop,dc->cellbegf,dc->cellbegb,dc->nct,dc->ncx,dc->ncy,dc->ncz,(dc->ncx*dc->ncy),dc->ovscell,dc->posmin,dc->difmax);
+            KerComputeProbesNeighs<tprobe,tkernel, ncellnv> <<<sgridp,bsize>>>(dc->nprobe,dc->probepos,dc->probevel,dc->proberhop,dc->pos, dc->vel,dc->rhop,dc->nctotmax-1,dc->cellnvf,dc->cellnvb,dc->nct,dc->ncx,dc->ncy,dc->ncz,(dc->ncx*dc->ncy),dc->ovscell,dc->posmin,dc->difmax);
             //TmgStop(dc->timers,TMG_SuProbes);
     }break;
     case CELLMODE_2H:
     case CELLMODE_H:{
             //TmgStart(dc->timers,TMG_SuProbes);
-            KerComputeProbes<tprobe,tkernel, ncellnv> <<<sgridp,bsize>>>(dc->nprobe,dc->probepos,dc->probevel,dc->proberhop,dc->pos, dc->vel,dc->rhop,dc->cellbegf,dc->cellbegb,dc->nct,dc->ncx,dc->ncy,dc->ncz,(dc->ncx*dc->ncy),dc->ovscell,dc->posmin,dc->difmax);
+            KerComputeProbes<tprobe,tkernel, (ncellnv==9? 1: 2)> <<<sgridp,bsize>>>(dc->nprobe,dc->probepos,dc->probevel,dc->proberhop,dc->pos, dc->vel,dc->rhop,dc->cellbegf,dc->cellbegb,dc->nct,dc->ncx,dc->ncy,dc->ncz,(dc->ncx*dc->ncy),dc->ovscell,dc->posmin,dc->difmax);
             //TmgStop(dc->timers,TMG_SuProbes);
     }break;
   }
-
+  CheckErrorCuda("Failed running CsComputeProbes on GPU.");
 }
 
 template<TpCellMode cellmode, CsTypeProbe tprobe, TpKernel tkernel> void CsCallComputeProbes2(StDeviceContext *dc,StDeviceCte *cte){
-  if(dc->ncellnv==9)CsComputeProbes<cellmode,tprobe,tkernel,9>(dc,cte);
-  else if(dc->ncellnv==25)CsComputeProbes<cellmode,tprobe,tkernel,25>(dc,cte);
+  if(dc->ncellnv==9)CsComputeProbes<cellmode,tprobe,tkernel,9U>(dc,cte);
+  else if(dc->ncellnv==25)CsComputeProbes<cellmode,tprobe,tkernel,25U>(dc,cte);
 }
 
 template<TpCellMode cellmode, CsTypeProbe tprobe> void CsCallComputeProbes1(StDeviceContext *dc,StDeviceCte *cte){

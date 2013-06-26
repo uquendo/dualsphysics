@@ -139,7 +139,7 @@ private:
   unsigned Nbound;               ///<Number of boundary particles ( \ref Nfixed + \ref Nmoving + \ref Nfloat ). 
   unsigned Nfluid;               ///<Number of fluid particles (including the excluded ones).  
   unsigned NfluidOut;            ///<Number of fluid particles excluded for the current \ref PartNumber.
-  unsigned long Nprobe;          ///<Number of probe particles.
+  unsigned Nprobe;          ///<Number of probe particles.
 
 
   unsigned *Id;                  ///<ID of particles.
@@ -174,7 +174,7 @@ public:
   JPartData();
   ~JPartData();
   void Reset();
-  void Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d=false,unsigned long nprobe=0);
+  void Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d=false,unsigned nprobe=0);
 
   unsigned SetDataUnsorted(unsigned part,float timepart,bool outreset,unsigned npok,unsigned nout,unsigned* id,tfloat3* pos,tfloat3* vel,float* rhop,tfloat3* probevel=NULL,float* proberhop=NULL);
 
@@ -230,7 +230,7 @@ public:
   unsigned GetNmoving()const{   return(Nmoving); }
   unsigned GetNfloat()const{    return(Nfloat); }
   unsigned GetNfluidOut()const{ return(NfluidOut); }
-  unsigned long GetNprobe()const{return(Nprobe); }
+  unsigned GetNprobe()const{return(Nprobe); }
 
   unsigned GetMemoryAlloc()const;
 

@@ -90,7 +90,7 @@ void JPartData::Reset(){
 //==============================================================================
 /// Sets the basic setup.
 //==============================================================================
-void JPartData::Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d,unsigned long nprobe){
+void JPartData::Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d,unsigned nprobe){
   const char met[]="Config";
   Reset();
   if(nbound+nfluid!=np||nfixed+nmoving+nfloat!=nbound)RunException(met,"Error in the number of particles of each type.");
@@ -224,7 +224,7 @@ unsigned JPartData::SetDataUnsorted(unsigned part,float timepart,bool outreset,u
 #endif
     //-Modifies probe particles
     if((probevel!=NULL)&&(proberhop!=NULL)){
-            for(unsigned long ppn=0; ppn<Nprobe; ppn++){
+            for(unsigned ppn=0; ppn<Nprobe; ppn++){
                     ProbeVel[ppn]=probevel[ppn]; ProbeRhop[ppn]=proberhop[ppn];
             }
     }
@@ -321,7 +321,7 @@ void JPartData::SaveFileFlw(std::string file) const{
   ofstream pf;
   pf.open(file.c_str(),ios::app);
   if(pf){
-    unsigned long i=0;
+    unsigned i=0;
     pf.precision(10);
     pf << "\n" <<
           "#\n" <<

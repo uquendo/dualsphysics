@@ -136,7 +136,7 @@ void JSph::AllocMemoryFloating(unsigned ftcount){
 //==============================================================================
 /// Allocates memory for probes arrays needed to write flw.
 //==============================================================================
-void JSph::AllocMemoryProbes(unsigned long np){
+void JSph::AllocMemoryProbes(unsigned np){
   delete[] ProbePos;  ProbePos=NULL;
   delete[] ProbeVel;  ProbeVel=NULL;
   delete[] ProbeRhop; ProbeRhop=NULL;
@@ -324,7 +324,7 @@ void JSph::LoadPartBegin(){
 }
 
 //==============================================================================
-/// Genarates output data files.
+/// Generates output data files.
 //==============================================================================
 void JSph::SaveData(){
   const char met[]="SaveData";
@@ -354,6 +354,7 @@ void JSph::SaveData(){
   }
   if(SvData&SDAT_Flw){
      //TODO: TimeStep?
+     if(SvData&SDAT_Vtk)JFormatFiles2::ParticlesToVtk(DirOut+"PartProbeVtk"+cad+".vtk",Nprobe,ProbePos,ProbeVel,ProbeRhop,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
      Pdata.SaveFile(JPartData::FmtFlw,DirOut);
   }
   //-Time computation.

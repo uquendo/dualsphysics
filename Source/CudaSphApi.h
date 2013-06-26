@@ -78,7 +78,7 @@ typedef struct{
   unsigned nfloat;           ///<Number of floating boundary particles. 
   unsigned nbound;           ///<Number of boundary particles ( \ref nfixed + \ref nmoving + \ref nfloat ).
   unsigned nfluid;           ///<Number of fluid particles (including the excluded ones).   
-  unsigned long nprobe;      ///<Number of probe particles.
+  unsigned nprobe;      ///<Number of probe particles.
 
   //-Variables on GPU.
   unsigned npok;             ///<Number of total particles activated at each time step (\ref np - excluded particles). 
