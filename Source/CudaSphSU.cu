@@ -548,7 +548,7 @@ void CsMoveMatBound(StDeviceContext *dc,unsigned pini,unsigned npar,tmatrix4f mv
 //==============================================================================
 /// Modifies density and velocity of probe particle iterating over some set of neighbours
 //==============================================================================
-template<TpKernel tkernel> __device__ void KerComputeProbesBox(const unsigned &pini, const unsigned &pfin, const float3* pos_box, const float3* vel_box, const float* rhop_box, const float3 &pospr, float3* velpr, float* rhoppr, unsigned n){
+template<TpKernel tkernel> __device__ void KerComputeProbesBox(const unsigned &pini, const unsigned &pfin, const float3* pos_box, const float3* vel_box, const float* rhop_box, const float mass_box, const float3 &pospr, float3* velpr, float* rhoppr, unsigned n){
   for(unsigned p_box=pini;p_box<pfin;p_box++){
     float3 dr=make_float3(pospr.x,pospr.y,pospr.z);
     dr.x-=pos_box[p_box].x;  dr.y-=pos_box[p_box].y;  dr.z-=pos_box[p_box].z;
@@ -557,21 +557,25 @@ template<TpKernel tkernel> __device__ void KerComputeProbesBox(const unsigned &p
         //===== Kernel =====
         const float rad=sqrt(rr2);
         const float qq=rad/CTE.h;
-        float fac;
+        float wab;
         if(tkernel==KERNEL_Cubic){//-Cubic kernel.
-          const float wqq1=2.0f-qq;
-          fac=(qq>1? CTE.cubic_c2*(wqq1*wqq1): (CTE.cubic_c1+CTE.cubic_d1*qq)*qq);
+          const bool radgt=(qq>1);
+          const float wqq1=(radgt? 2.0f-qq: qq);
+          const float wqq2=wqq1*wqq1;
+          const float wqq3=wqq2*wqq1;
+          wab=(radgt? CTE.cubic_a24*wqq3: CTE.cubic_a2*(1.0f-1.5f*wqq2+0.75f*wqq3));
         }
         if(tkernel==KERNEL_Wendland){//-Wendland kernel.
+          const float wqq=2.f*qq+1.f;
           const float wqq1=1.f-0.5f*qq;
-
-          fac=CTE.wendland_bwen*qq*wqq1*wqq1*wqq1;
+          const float wqq2=wqq1*wqq1;
+          wab=CTE.wendland_awen*wqq*wqq2*wqq2;
         }
-        rhoppr[n]+=rhop_box[p_box]*fac;
-        velpr[n].x+=vel_box[p_box].x*fac;
-        velpr[n].y+=vel_box[p_box].y*fac;
-        velpr[n].z+=vel_box[p_box].z*fac;
-//        printf("KerComputeProbesBox: fac=%f,rhop=%f,vel=%f,%f,%f\n",fac,rhoppr[n],velpr[n].x,velpr[n].y,velpr[n].z);
+        rhoppr[n]+=mass_box*wab;
+        velpr[n].x+=vel_box[p_box].x*mass_box/rhop_box[p_box]*wab;
+        velpr[n].y+=vel_box[p_box].y*mass_box/rhop_box[p_box]*wab;
+        velpr[n].z+=vel_box[p_box].z*mass_box/rhop_box[p_box]*wab;
+        //printf("KerComputeProbesBox: fac=%f,rhop=%f,vel=%f,%f,%f\n",wab,rhoppr[n],velpr[n].x,velpr[n].y,velpr[n].z);
     }
   }
 }
@@ -592,13 +596,13 @@ template <CsTypeProbe _tprobe, TpKernel tkernel, unsigned ncellnv> __global__  v
     for(int r=0;r<ncellnv;r++){
       rg=(!r||rg.y? cellnvf[r*ncells+cel]: make_uint2(0,0));
 //      printf("KerComputeProbesNeighs: p=%u,cel=%d,r=%d,rg=%u,%u,nc=%u,%u,%u,ncells=%u,cid=%u,cidmax=%u,nct=%u\n",p,cel,r,rg.x,rg.y,ncx,ncy,ncz,ncells,r*ncells+cel,(nct-1)*ncellnv,nct);
-      if(rg.y) KerComputeProbesBox<tkernel>(rg.x,rg.y,pos,vel,rhop,rpos,prvel,prrhop,p);
+      if(rg.y) KerComputeProbesBox<tkernel>(rg.x,rg.y,pos,vel,rhop,CTE.massf,rpos,prvel,prrhop,p);
     }
     if(_tprobe==PR_All){
     //-Interaction with boundaries.
     for(int r=0;r<ncellnv;r++){
       rg=(!r||rg.y? cellnvb[r*ncells+cel]: make_uint2(0,0));
-      if(rg.y)KerComputeProbesBox<tkernel>(rg.x,rg.y,pos,vel,rhop,rpos,prvel,prrhop,p);
+      if(rg.y)KerComputeProbesBox<tkernel>(rg.x,rg.y,pos,vel,rhop,CTE.massb,rpos,prvel,prrhop,p);
     }
     }
     }
@@ -639,7 +643,7 @@ template<CsTypeProbe _tprobe, TpKernel tkernel, unsigned hdiv> __global__  void 
             pfin=cbeg.y;
           }
         }
-        if(pfin)KerComputeProbesBox<tkernel>(pini,pfin,pos,vel,rhop,rpos,prvel,prrhop,p);
+        if(pfin)KerComputeProbesBox<tkernel>(pini,pfin,pos,vel,rhop,CTE.massf,rpos,prvel,prrhop,p);
       }
     }
     if(_tprobe==PR_All){
@@ -656,7 +660,7 @@ template<CsTypeProbe _tprobe, TpKernel tkernel, unsigned hdiv> __global__  void 
             pfin=cbeg.y;
           }
         }
-        if(pfin)KerComputeProbesBox<tkernel>(pini,pfin,pos,vel,rhop,rpos,prvel,prrhop,p);
+        if(pfin)KerComputeProbesBox<tkernel>(pini,pfin,pos,vel,rhop,CTE.massb,rpos,prvel,prrhop,p);
       }
     }
     }
