@@ -11,7 +11,7 @@ JProbe::~JProbe()
 {
 }
 
-void JProbe::LoadFileG3D(std::string filename)
+void JProbe::LoadFileG3D(std::string filename,float scale, tfloat3 shift)
 {
         const char met[]="LoadFileG3D";
         std::ifstream pf;
@@ -20,8 +20,9 @@ void JProbe::LoadFileG3D(std::string filename)
                 pf.ignore(256,'\n');
                 float fpx,fpy,fpz; unsigned n;
                 for(unsigned i=0;i<Nprobes;i++){
-                        pf >> fpx >> fpy >> fpz >> n;
-                        ProbePos[i]=TFloat3(fpx,fpy,fpz);
+                        pf >> fpx >> fpz >> fpy >> n;
+                        //!Y and Z axis are interchanged
+                        ProbePos[i]=TFloat3(scale*(fpx+shift.x),scale*(fpy+shift.y),scale*(fpz+shift.z));
                 }
                 if(pf.fail()) RunException(met,"Error reading data file.",filename);
                 pf.close();

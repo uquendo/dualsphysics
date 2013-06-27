@@ -139,8 +139,9 @@ private:
   unsigned Nbound;               ///<Number of boundary particles ( \ref Nfixed + \ref Nmoving + \ref Nfloat ). 
   unsigned Nfluid;               ///<Number of fluid particles (including the excluded ones).  
   unsigned NfluidOut;            ///<Number of fluid particles excluded for the current \ref PartNumber.
-  unsigned Nprobe;          ///<Number of probe particles.
+  unsigned Nprobe;               ///<Number of probe particles.
 
+  float FlwTimeScale;            ///<Time scaling for .flw output
 
   unsigned *Id;                  ///<ID of particles.
   tfloat3 *Pos;                  ///<Position of particles.
@@ -174,7 +175,7 @@ public:
   JPartData();
   ~JPartData();
   void Reset();
-  void Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d=false,unsigned nprobe=0);
+  void Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d=false,unsigned nprobe=0,float flwtimescale=1.0f);
 
   unsigned SetDataUnsorted(unsigned part,float timepart,bool outreset,unsigned npok,unsigned nout,unsigned* id,tfloat3* pos,tfloat3* vel,float* rhop,tfloat3* probevel=NULL,float* proberhop=NULL);
 

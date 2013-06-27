@@ -41,6 +41,7 @@ Please download source files and documentation from <a href="http://dual.sphysic
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include <locale>
 using namespace std;
 #include "JLog.h"
 #include "JCfgRun.h"
@@ -78,6 +79,7 @@ std::string getlicense(const char* name){
 int main(int argc, char** argv)
 {
   int errcode=1;
+  locale::global(locale::classic());
   std::string license=getlicense("DUALSPHYSICS");
   printf("%s",license.c_str());
   char appname[256],appnamesub[256];

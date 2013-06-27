@@ -136,11 +136,16 @@ protected:
   float Blin;                ///<Blin constant used in the SPS turbulence model.
   float IncZ;                ///<Allowed increase in Z direction distZ=(distZ*(1+IncZ)).
   unsigned PartOutMax;       ///<Allowed percentage of fluid particles out the domain.
+  float G3DShiftX;          ///<Moves .g3d file along X axis when loading
+  float G3DShiftY;          ///<Moves .g3d file along Y axis when loading
+  float G3DShiftZ;          ///<Moves .g3d file along Z axis when loading
+  float G3DScale;            ///<Scales .g3d file after moving when loading
+  float FlwTimeScale;         ///<Scales time in .flw output
 
   StInfoDt InfoDt;           ///<Structure to monitor the used dt values.
   int DtModif;               ///<Number of modifications performed when the new value of dt is too low.
 
-  int SvData;               ///<Indicates the format of the output files.               
+  int SvData;                ///<Indicates the format of the output files.               
 
   ofstream *DtPf;            ///<Pointer for the file with info of DT.
   bool SvDt;                 ///<Stores a file with info of DT.

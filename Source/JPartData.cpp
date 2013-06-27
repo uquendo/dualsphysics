@@ -84,13 +84,14 @@ void JPartData::Reset(){
   NfluidOut=0;
   Nfixed=0; Nmoving=0; Nfloat=0;
   Nprobe=0;
+  FlwTimeScale=1.0f;
   memset(&ConfigInfo,0,sizeof(StConfig));
 }
 
 //==============================================================================
 /// Sets the basic setup.
 //==============================================================================
-void JPartData::Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d,unsigned nprobe){
+void JPartData::Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid,unsigned nfixed,unsigned nmoving,unsigned nfloat,float dp,float h,float b,float rhop0,float gamma,float massbound,float massfluid,bool data2d,unsigned nprobe,float flwtimescale){
   const char met[]="Config";
   Reset();
   if(nbound+nfluid!=np||nfixed+nmoving+nfloat!=nbound)RunException(met,"Error in the number of particles of each type.");
@@ -100,6 +101,7 @@ void JPartData::Config(TpFmtFile fmt,unsigned np,unsigned nbound,unsigned nfluid
   Np=np; Nbound=nbound; Nfluid=nfluid;
   Nfixed=nfixed; Nmoving=nmoving; Nfloat=nfloat;
   Nprobe=nprobe;
+  FlwTimeScale=flwtimescale;
   try{
     Id=new unsigned[Np];        
     Pos=new tfloat3[Np];       
@@ -288,6 +290,7 @@ void JPartData::SaveFileFlw(std::string file) const{
         string fbase=fun::GetWithoutExtension(file);
         string filetpl=fbase+".flw.tpl";
         string fileg3d=fbase+".g3d";
+        if(!fun::FileExists(fileg3d)) fileg3d=fbase+".G3D";
         ofstream pf_head;
         pf_head.open(file.c_str());
         if(!pf_head) RunException(met,"Cannot open the file.",file);
@@ -301,18 +304,14 @@ void JPartData::SaveFileFlw(std::string file) const{
         ifstream pf_g3d;
         pf_g3d.open(fileg3d.c_str());
         if(pf_g3d){
-                pf_head << "\n" <<
-                        "{*** SURFACE_GEOMETRY section intensionaly left blank ***}\n" << 
-                        "#\n" << 
-                        "SURFACE_GEOMETRY:\n" << 
-                        "0 0 - SumPoints_SumElements\n" <<
-                        "-***-\n" <<
-                        "DATA GEOMETRY\n" << 
-                        fileg3d << "\n" <<
+                pf_head << "\r\n" <<
+                        "-***-" << "\r\n" <<
+                        "DATA GEOMETRY" << "\r\n" <<
+                        fileg3d << "\r\n" <<
                         pf_g3d.rdbuf() <<
-                        "\n"
-                        "-***-\n" <<
-                        "DATA CALCULATION\n";
+                        "\r\n" <<
+                        "-***-" << "\r\n" <<
+                        "DATA CALCULATION";
                 if(pf_head.fail())RunException(met,"File writing failure.",file);
                 pf_g3d.close();
         }else RunException(met,"Cannot open the file.",fileg3d);
@@ -322,26 +321,32 @@ void JPartData::SaveFileFlw(std::string file) const{
   pf.open(file.c_str(),ios::app);
   if(pf){
     unsigned i=0;
-    pf.precision(10);
-    pf << "\n" <<
-          "#\n" <<
-          GetPartTime() << "\n";
+    const char fmtvel[] = "%f %f %f ";
+    const char fmttime[] = "%3.3f ";
+    char buf[4096];
+    pf.precision(6);
+    sprintf(buf,fmttime,FlwTimeScale*GetPartTime());
+    pf << "\r\n" <<
+          "#" << "\r\n" <<
+          buf << "\r\n";
     for(i=0;i<Nprobe;i++){
-        if ((i>0)&&(i%15==0)) pf << "\n";
-        pf << int(ProbeRhop[i]) << " ";
+        if ((i>0)&&(i%15==0)) pf << "\r\n";
+        pf << (ProbeRhop[i]!=0?"1":"0") << " ";
     }
-    pf << "\n#1\n" <<
-          Nprobe << "\n";
+    pf << "\r\n" << "#1" << "\r\n" <<
+          Nprobe << "\r\n";
     for(i=0;i<Nprobe;i++){
-        if ((i>0)&&(i%5==0)) pf << "\n";
-        pf << ProbeVel[i].x << " " << ProbeVel[i].y << " " << ProbeVel[i].z << " ";
+        if ((i>0)&&(i%5==0)) pf << "\r\n";
+        //!Y and Z axis are interchanged
+        sprintf(buf,fmtvel, ProbeVel[i].x, ProbeVel[i].z, ProbeVel[i].y);
+        pf << buf;
     }
-    pf << "\n#2\n" << 
-          Nprobe << "\n";
+    pf << "\r\n" << "#2" << "\r\n" <<
+          Nprobe << "\r\n";
     for(i=0;i<Nprobe;i++){
-        if ((i>0)&&(i%5==0)) pf << "\n";
-        pf << int(ProbeRhop[i]) << " ";
-    } //WTF?! do we really need to write density array twice?!
+        if ((i>0)&&(i%5==0)) pf << "\r\n";
+        pf << (ProbeRhop[i]!=0?"1":"0") << " ";
+    }
     if(pf.fail())RunException(met,"File writing failure.",file);
     pf.close();
   } else RunException(met,"Cannot open the file.",file);

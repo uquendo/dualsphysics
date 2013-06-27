@@ -481,7 +481,7 @@ void JSphGpu::SaveData(){
   GetVarsDevice();
   unsigned pini=(BoundDatVer<Dc.bounddatver? 0: Npb);
   if(Nprobe){
-        CsCallComputeProbes(PR_All,&Dc,&CteVars);
+        CsCallComputeProbes(PR_Fluid,&Dc,&CteVars);
         CsDownDataProbe(&Dc,pini,Idp,(float3*)Pos,(float3*)Vel,Rhop,(float3*)ProbeVel,ProbeRhop);
   } else CsDownData(&Dc,pini,Idp,(float3*)Pos,(float3*)Vel,Rhop);
   BoundDatVer=Dc.bounddatver;

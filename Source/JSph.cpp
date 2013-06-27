@@ -100,6 +100,11 @@ void JSph::Reset(){
   RhopOut=false; RhopOutMin=0; RhopOutMax=0; RhopOutCount=0;
   FtCount=0;
   AllocMemoryFloating(0);
+  FlwTimeScale=1.0f;
+  G3DScale=1.0f;
+  G3DShiftX=0.0f;
+  G3DShiftY=0.0f;
+  G3DShiftZ=0.0f;
 }
 //==============================================================================
 /// Allocates memory of main data.
@@ -190,6 +195,11 @@ void JSph::LoadCase(){
   DtIni=eparms.GetValueFloat("DtIni");
   DtMin=eparms.GetValueFloat("DtMin",true,0.00001f);
   IncZ=eparms.GetValueFloat("IncZ");
+  FlwTimeScale=eparms.GetValueFloat("FlwTimeScale",true,1.0f);
+  G3DScale=eparms.GetValueFloat("G3DScale",true,1.0f);
+  G3DShiftX=eparms.GetValueFloat("G3DShiftX",true,0.0f);
+  G3DShiftY=eparms.GetValueFloat("G3DShiftY",true,0.0f);
+  G3DShiftZ=eparms.GetValueFloat("G3DShiftZ",true,0.0f);
 
   //-Predefined constantes.
   H=ctes.GetH();
@@ -272,18 +282,18 @@ void JSph::LoadCase(){
   if(SvData&SDAT_Flw){
         Log->Print("**Loading initial state of probe particles");
         string fileg3d=DirCase+"Part.g3d";
+        if(!fun::FileExists(fileg3d)) fileg3d=DirCase+"Part.G3D";
         if(!fun::FileExists(fileg3d)) RunException(met,"G3D file was not found.",fileg3d);
         JProbe probeini;
         probeini.LoadCastNodesCountG3D(fileg3d);
         Nprobe=probeini.GetNProbe();
         AllocMemoryProbes(Nprobe);
         probeini.SetProbeArrays(ProbePos,ProbeVel,ProbeRhop);
-        probeini.LoadFileG3D(fileg3d);
-        //TODO: check and/or correct position mapping
+        probeini.LoadFileG3D(fileg3d,G3DScale,TFloat3(G3DShiftX,G3DShiftY,G3DShiftZ));
   }
 
   //-Prepares Pdata for the maintenance of the particles.
-  Pdata.Config(JPartData::FmtBi2,Np,Nbound,Nfluid,Nfixed,Nmoving,Nfloat,cf.dp,cf.h,cf.b,RHOPZERO,cf.gamma,cf.massbound,cf.massfluid,Simulate2D,Nprobe);
+  Pdata.Config(JPartData::FmtBi2,Np,Nbound,Nfluid,Nfixed,Nmoving,Nfloat,cf.dp,cf.h,cf.b,RHOPZERO,cf.gamma,cf.massbound,cf.massfluid,Simulate2D,Nprobe,FlwTimeScale);
   Log->Print("**Initial state of particles is loaded");
 
   CaseLoaded=true;
@@ -732,6 +742,11 @@ void JSph::VisuConfig(){
     Log->Print(fun::VarStr("RhopOutMax",RhopOutMax));
   }
   if(CteB==0)RunException(met,"Constant \'B\' can not be zero. (B=coefsound2*rho0*g*(h_SWL)/gamma is zero when h_SWL=0 (difference of heights in Z-direction)");  
+  Log->Print(fun::VarStr("FlwTimeScale",FlwTimeScale));
+  Log->Print(fun::VarStr("G3DScale",G3DScale));
+  Log->Print(fun::VarStr("G3DShiftX",G3DShiftX));
+  Log->Print(fun::VarStr("G3DShiftY",G3DShiftY));
+  Log->Print(fun::VarStr("G3DShiftZ",G3DShiftZ));
 }
 
 //==============================================================================
