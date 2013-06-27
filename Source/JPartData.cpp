@@ -39,6 +39,13 @@ using std::min;
 using std::max;
 using std::endl;
 
+//macro setting newline for .flw to \r\n on all platforms
+#ifdef WIN32
+        #define WIN_ENDL endl
+#else
+        #define WIN_ENDL "\r\n"
+#endif /* WIN32 */
+
 
 //==============================================================================
 /// Constructor.
@@ -304,13 +311,13 @@ void JPartData::SaveFileFlw(std::string file) const{
         ifstream pf_g3d;
         pf_g3d.open(fileg3d.c_str());
         if(pf_g3d){
-                pf_head << "\r\n" <<
-                        "-***-" << "\r\n" <<
-                        "DATA GEOMETRY" << "\r\n" <<
-                        fileg3d << "\r\n" <<
+                pf_head << WIN_ENDL <<
+                        "-***-" << WIN_ENDL <<
+                        "DATA GEOMETRY" << WIN_ENDL <<
+                        fileg3d << WIN_ENDL <<
                         pf_g3d.rdbuf() <<
-                        "\r\n" <<
-                        "-***-" << "\r\n" <<
+                        WIN_ENDL <<
+                        "-***-" << WIN_ENDL <<
                         "DATA CALCULATION";
                 if(pf_head.fail())RunException(met,"File writing failure.",file);
                 pf_g3d.close();
@@ -326,25 +333,25 @@ void JPartData::SaveFileFlw(std::string file) const{
     char buf[4096];
     pf.precision(6);
     sprintf(buf,fmttime,FlwTimeScale*GetPartTime());
-    pf << "\r\n" <<
-          "#" << "\r\n" <<
-          buf << "\r\n";
+    pf << WIN_ENDL <<
+          "#" << WIN_ENDL <<
+          buf << WIN_ENDL;
     for(i=0;i<Nprobe;i++){
-        if ((i>0)&&(i%15==0)) pf << "\r\n";
+        if ((i>0)&&(i%15==0)) pf << WIN_ENDL;
         pf << (ProbeRhop[i]!=0?"1":"0") << " ";
     }
-    pf << "\r\n" << "#1" << "\r\n" <<
-          Nprobe << "\r\n";
+    pf << WIN_ENDL << "#1" << WIN_ENDL <<
+          Nprobe << WIN_ENDL;
     for(i=0;i<Nprobe;i++){
-        if ((i>0)&&(i%5==0)) pf << "\r\n";
+        if ((i>0)&&(i%5==0)) pf << WIN_ENDL;
         //!Y and Z axis are interchanged
         sprintf(buf,fmtvel, ProbeVel[i].x, ProbeVel[i].z, ProbeVel[i].y);
         pf << buf;
     }
-    pf << "\r\n" << "#2" << "\r\n" <<
-          Nprobe << "\r\n";
+    pf << WIN_ENDL << "#2" << WIN_ENDL <<
+          Nprobe << WIN_ENDL;
     for(i=0;i<Nprobe;i++){
-        if ((i>0)&&(i%5==0)) pf << "\r\n";
+        if ((i>0)&&(i%5==0)) pf << WIN_ENDL;
         pf << (ProbeRhop[i]!=0?"1":"0") << " ";
     }
     if(pf.fail())RunException(met,"File writing failure.",file);
