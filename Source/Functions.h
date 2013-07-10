@@ -24,6 +24,7 @@
 
 #include <ctime>
 #include <string>
+#include <sys/types.h>
 #include <sys/stat.h>
 #include "TypesDef.h"
 

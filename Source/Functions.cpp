@@ -209,8 +209,13 @@ void PrintVar(const std::string &name,unsigned value,const std::string &post){ p
 //==============================================================================
 int FileType(const std::string &name){
   int ret=0;
+#ifdef WIN32
+  struct _stat64 stfileinfo;
+  int intstat=_stati64(name.c_str(),&stfileinfo);
+#else
   struct stat stfileinfo;
   int intstat=stat(name.c_str(),&stfileinfo);
+#endif /*WIN32*/
   if(intstat==0){
     if(stfileinfo.st_mode&S_IFDIR)ret=1;
     if(stfileinfo.st_mode&S_IFREG)ret=2;
